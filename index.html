@@ -13769,7 +13769,7 @@ afficher d[1], …, d[N] (−1 pour +∞)</code></pre>
   <tr><th>ville fixée</th><td>1</td><td>2</td><td>3</td><td>6</td><td>4</td><td>5</td></tr>
   <tr><th>distance</th><td>0</td><td>7</td><td>9</td><td>11</td><td>20</td><td>20</td></tr>
   <tr><th>par</th><td>—</td><td>1–2</td><td>1–3</td><td>3–6</td><td>3–4</td><td>6–5</td></tr>
-</table>`,parent:{goal:"L’algorithme de Dijkstra avec un tas.",followUps:["Et sans la route 3–6 ? (0 7 9 20 23 14 : la ville 6 n’est plus qu’à 14, par la route directe.)","Pourquoi Dijkstra ne marche-t-il pas avec des longueurs négatives ? (Une ville fixée pourrait être rejointe plus tard par un chemin plus court, qui passe par une route négative.)"],commonMistake:"Fixer une ville dès qu’on lui trouve une distance, sans attendre qu’elle soit la plus petite du tas : la ville 6 serait fixée à 14 au lieu de 11.",problems:["flight-routes","shortest-routes-ii"]}},{id:"q-probleme-le-diametre-de-la-ville",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le diamètre de la ville",question:`
+</table>`,parent:{goal:"L’algorithme de Dijkstra avec un tas.",followUps:["Et sans la route 3–6 ? (0 7 9 20 23 14 : la ville 6 n’est plus qu’à 14, par la route directe.)","Pourquoi Dijkstra ne marche-t-il pas avec des longueurs négatives ? (Une ville fixée pourrait être rejointe plus tard par un chemin plus court, qui passe par une route négative.)"],commonMistake:"Fixer une ville dès qu’on lui trouve une distance, sans attendre qu’elle soit la plus petite du tas : la ville 6 serait fixée à 14 au lieu de 11.",problems:["plus-court-trajet","flight-routes","shortest-routes-ii"]}},{id:"q-probleme-le-diametre-de-la-ville",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le diamètre de la ville",question:`
 <p>
   Une ville a <em>N</em> carrefours reliés par <em>M</em> rues à double sens, chacune avec sa longueur.
   On peut aller de n’importe quel carrefour à n’importe quel autre. Le <strong>diamètre</strong> de
@@ -13804,7 +13804,7 @@ afficher le plus grand d[i][j]</code></pre>
   <tr><th>vers 3</th><td>7</td><td>4</td><td>0</td><td>2</td><td>8</td></tr>
   <tr><th>vers 4</th><td>8</td><td>5</td><td>2</td><td>0</td><td>6</td></tr>
   <tr><th>vers 5</th><td>8</td><td>11</td><td>8</td><td>6</td><td>0</td></tr>
-</table>`,parent:{goal:"L’algorithme de Floyd-Warshall : toutes les distances d’un coup.",followUps:["Et si on ajoutait une rue 3–5 de longueur 3 ? (8 : la distance de 2 à 5 tombe à 7.)","Pourquoi la boucle sur k doit-elle être la plus extérieure ? (Sinon, on utiliserait d[i][k] avant de l’avoir bien calculé.)"],commonMistake:"Mettre la boucle sur k à l’intérieur : certaines distances resteraient trop grandes.",problems:["shortest-routes-ii","flight-routes"]}},{id:"q-probleme-les-rumeurs",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : les rumeurs",question:`
+</table>`,parent:{goal:"L’algorithme de Floyd-Warshall : toutes les distances d’un coup.",followUps:["Et si on ajoutait une rue 3–5 de longueur 3 ? (8 : la distance de 2 à 5 tombe à 7.)","Pourquoi la boucle sur k doit-elle être la plus extérieure ? (Sinon, on utiliserait d[i][k] avant de l’avoir bien calculé.)"],commonMistake:"Mettre la boucle sur k à l’intérieur : certaines distances resteraient trop grandes.",problems:["diametre-de-la-ville","shortest-routes-ii","flight-routes"]}},{id:"q-probleme-les-rumeurs",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : les rumeurs",question:`
 <p>
   Dans une école de <em>N</em> élèves, chaque lien « <em>a</em> <em>b</em> » veut dire que
   <em>a</em> raconte tout à <em>b</em> (mais pas forcément l’inverse). Une rumeur passe de lien en
@@ -13835,7 +13835,7 @@ afficher le nombre de paires (i, j) avec i ≠ j et r[i][j]</code></pre>
   <tr><th>élève</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
   <tr><th>atteint</th><td>2, 3, 4</td><td>1, 3, 4</td><td>1, 2, 4</td><td>—</td><td>4</td></tr>
   <tr><th>paires</th><td>3</td><td>3</td><td>3</td><td>0</td><td>1</td></tr>
-</table>`,parent:{goal:"La fermeture transitive par l’algorithme de Warshall.",followUps:["Et avec un lien de plus, 4 1 ? (16 : 1, 2, 3 et 4 s’atteignent tous, et 5 les atteint tous par 4.)","Pourquoi demander a ≠ b ? (Dans le cercle 1 → 2 → 3 → 1, la rumeur de 1 revient à 1 ; on ne veut pas compter ça.)"],commonMistake:"Compter aussi r[i][i] : les élèves du cercle se compteraient eux-mêmes.",problems:["flight-routes-check","course-schedule"]}},{id:"q-probleme-la-hauteur-de-l-arbre-de-recherche",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la hauteur de l’arbre de recherche",question:`
+</table>`,parent:{goal:"La fermeture transitive par l’algorithme de Warshall.",followUps:["Et avec un lien de plus, 4 1 ? (16 : 1, 2, 3 et 4 s’atteignent tous, et 5 les atteint tous par 4.)","Pourquoi demander a ≠ b ? (Dans le cercle 1 → 2 → 3 → 1, la rumeur de 1 revient à 1 ; on ne veut pas compter ça.)"],commonMistake:"Compter aussi r[i][i] : les élèves du cercle se compteraient eux-mêmes.",problems:["rumeurs","flight-routes-check","course-schedule"]}},{id:"q-probleme-la-hauteur-de-l-arbre-de-recherche",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la hauteur de l’arbre de recherche",question:`
 <p>
   On range des nombres (tous différents) dans un <strong>arbre binaire de recherche</strong> : le
   premier nombre est la racine. Pour ranger un nouveau nombre, on part de la racine ; s’il est plus
@@ -13873,7 +13873,7 @@ afficher hauteur</code></pre>
 <table class="lesson-table">
   <tr><th>nombre</th><td>50</td><td>30</td><td>70</td><td>20</td><td>40</td><td>60</td><td>80</td><td>35</td><td>45</td><td>42</td></tr>
   <tr><th>profondeur</th><td>0</td><td>1</td><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>3</td><td>3</td><td>4</td></tr>
-</table>`,parent:{goal:"L’arbre binaire de recherche : insérer en descendant à gauche ou à droite.",followUps:["Quelle est la hauteur pour 1 2 3 4 5 ? (4 : chaque nombre va à droite du précédent.)","Où va 55 si on l’ajoute ? (Sous 60, à gauche : 50 → 70 → 60 → 55.)"],commonMistake:"Compter les nœuds au lieu des branches : on trouverait 5 au lieu de 4.",problems:["distinct-numbers","concert-tickets"]}},{id:"q-probleme-le-chemin-de-recherche",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le chemin de recherche",question:`
+</table>`,parent:{goal:"L’arbre binaire de recherche : insérer en descendant à gauche ou à droite.",followUps:["Quelle est la hauteur pour 1 2 3 4 5 ? (4 : chaque nombre va à droite du précédent.)","Où va 55 si on l’ajoute ? (Sous 60, à gauche : 50 → 70 → 60 → 55.)"],commonMistake:"Compter les nœuds au lieu des branches : on trouverait 5 au lieu de 4.",problems:["hauteur-arbre-de-recherche","distinct-numbers","concert-tickets"]}},{id:"q-probleme-le-chemin-de-recherche",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le chemin de recherche",question:`
 <p>
   On range des nombres (tous différents) dans un arbre binaire de recherche, comme dans le problème
   précédent. Ensuite, on cherche des nombres : on part de la racine, on compare, et on descend à
@@ -13906,7 +13906,7 @@ pour chaque nombre q à chercher :
   <tr><th>nœuds comparés</th><td>50 30 40 45 42</td><td>50 70 60</td><td>50 70 60</td><td>50</td></tr>
   <tr><th>trouvé ?</th><td>oui</td><td>oui</td><td>non</td><td>oui</td></tr>
   <tr><th>comparaisons</th><td>5</td><td>3</td><td>3</td><td>1</td></tr>
-</table>`,parent:{goal:"Chercher dans un arbre binaire de recherche en éliminant un côté à chaque comparaison.",followUps:["Combien de comparaisons pour chercher 10 ? (3 : 50, 30, 20.)","Dans quel ordre faut-il ranger 1 à 7 pour que toute recherche fasse au plus 3 comparaisons ? (Par exemple 4 2 6 1 3 5 7.)"],commonMistake:"Compter seulement les déplacements vers un enfant : on trouverait une comparaison de moins à chaque fois.",problems:["concert-tickets","distinct-numbers"]}},{id:"q-probleme-le-centre-du-reseau",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le centre du réseau",question:`
+</table>`,parent:{goal:"Chercher dans un arbre binaire de recherche en éliminant un côté à chaque comparaison.",followUps:["Combien de comparaisons pour chercher 10 ? (3 : 50, 30, 20.)","Dans quel ordre faut-il ranger 1 à 7 pour que toute recherche fasse au plus 3 comparaisons ? (Par exemple 4 2 6 1 3 5 7.)"],commonMistake:"Compter seulement les déplacements vers un enfant : on trouverait une comparaison de moins à chaque fois.",problems:["chemin-de-recherche","concert-tickets","distinct-numbers"]}},{id:"q-probleme-le-centre-du-reseau",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le centre du réseau",question:`
 <p>
   On veut construire une caserne de pompiers dans une des <em>N</em> villes d’un réseau de routes à
   double sens (on peut aller de chaque ville à chaque autre). Pour chaque ville, on regarde la ville
@@ -13938,7 +13938,7 @@ afficher meilleure, eloignement</code></pre>
   <tr><th>ville</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
   <tr><th>distances</th><td>0 3 7 8 8</td><td>3 0 4 5 11</td><td>7 4 0 2 8</td><td>8 5 2 0 6</td><td>8 11 8 6 0</td></tr>
   <tr><th>éloignement</th><td>8</td><td>11</td><td>8</td><td>8</td><td>11</td></tr>
-</table>`,parent:{goal:"Floyd-Warshall, puis l’excentricité de chaque ville.",followUps:["Pourquoi « e < eloignement » et pas « e ≤ » ? (Pour garder la plus petite ville en cas d’égalité : on parcourt les villes dans l’ordre.)","Et si on voulait la ville qui minimise la somme des distances ? (On prendrait la somme de la ligne au lieu du maximum : ici, la ville 3, avec 21.)"],commonMistake:"Prendre la ville qui minimise la somme des distances : ce n’est pas la même question.",problems:["shortest-routes-ii","voronoi-villages"]}},{id:"q-probleme-le-detour-obligatoire",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le détour obligatoire",question:`
+</table>`,parent:{goal:"Floyd-Warshall, puis l’excentricité de chaque ville.",followUps:["Pourquoi « e < eloignement » et pas « e ≤ » ? (Pour garder la plus petite ville en cas d’égalité : on parcourt les villes dans l’ordre.)","Et si on voulait la ville qui minimise la somme des distances ? (On prendrait la somme de la ligne au lieu du maximum : ici, la ville 3, avec 21.)"],commonMistake:"Prendre la ville qui minimise la somme des distances : ce n’est pas la même question.",problems:["centre-du-reseau","shortest-routes-ii","voronoi-villages"]}},{id:"q-probleme-le-detour-obligatoire",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le détour obligatoire",question:`
 <p>
   Un livreur va de la ville 1 à la ville <em>N</em> par des routes à double sens. Mais il doit
   d’abord passer prendre un colis dans la ville <em>K</em>. Quelle est la longueur du plus court
@@ -13964,7 +13964,7 @@ sinon :
 <table class="lesson-table">
   <tr><th>ville</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
   <tr><th>distance depuis 4</th><td>5</td><td>9</td><td>3</td><td>0</td><td>9</td><td>9</td></tr>
-</table>`,parent:{goal:"Couper un trajet imposé en morceaux, et réutiliser Dijkstra.",followUps:["Et si le colis était dans la ville 5 ? (9 : 1–3–5 (8) puis 5–6 (1).)","Et avec deux colis, en K1 puis K2 ? (d(1, K1) + d(K1, K2) + d(K2, N) : deux Dijkstra suffisent, depuis K1 et depuis K2.)"],commonMistake:"Lancer Dijkstra depuis 1 et ajouter la distance de 1 à N : on ne passerait pas forcément par K.",problems:["flight-routes","shortest-routes-ii"]}},{id:"q-probleme-la-traversee-du-marais",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : la traversée du marais",question:`
+</table>`,parent:{goal:"Couper un trajet imposé en morceaux, et réutiliser Dijkstra.",followUps:["Et si le colis était dans la ville 5 ? (9 : 1–3–5 (8) puis 5–6 (1).)","Et avec deux colis, en K1 puis K2 ? (d(1, K1) + d(K1, K2) + d(K2, N) : deux Dijkstra suffisent, depuis K1 et depuis K2.)"],commonMistake:"Lancer Dijkstra depuis 1 et ajouter la distance de 1 à N : on ne passerait pas forcément par K.",problems:["detour-obligatoire","flight-routes","shortest-routes-ii"]}},{id:"q-probleme-la-traversee-du-marais",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : la traversée du marais",question:`
 <p>
   Un marais est une grille ; chaque case a une difficulté entre 1 et 9. Une grenouille part de la
   case en haut à gauche et veut atteindre la case en bas à droite, en sautant vers une case voisine
@@ -13997,7 +13997,7 @@ afficher d[L][C]</code></pre>
   <tr><th>ligne</th><td>1</td><td>2</td><td>3</td><td>4</td></tr>
   <tr><th>distances</th><td>0 3 4 6 15</td><td>7 6 8 15 24</td><td>8 13 13 18 21</td><td>10 13 17 19 24</td></tr>
 </table>
-<p>Chaque case montre la dépense minimale pour y arriver. La case d’arrivée vaut 24.</p>`,parent:{goal:"Dijkstra sur une grille, sans construire le graphe.",followUps:["Quelle est la dépense minimale pour la case en bas à gauche ? (10 : bas, bas, bas.)","Et si toutes les cases valaient 1 ? (L + C − 2 : un parcours en largeur suffirait.)"],commonMistake:"N’autoriser que les sauts vers la droite et vers le bas : on raterait les chemins qui contournent un obstacle.",problems:["grid-paths","counting-rooms"]}},{id:"q-probleme-la-k-ieme-plus-petite-de-l-arbre",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : la k-ième plus petite de l’arbre",question:`
+<p>Chaque case montre la dépense minimale pour y arriver. La case d’arrivée vaut 24.</p>`,parent:{goal:"Dijkstra sur une grille, sans construire le graphe.",followUps:["Quelle est la dépense minimale pour la case en bas à gauche ? (10 : bas, bas, bas.)","Et si toutes les cases valaient 1 ? (L + C − 2 : un parcours en largeur suffirait.)"],commonMistake:"N’autoriser que les sauts vers la droite et vers le bas : on raterait les chemins qui contournent un obstacle.",problems:["traversee-du-marais","grid-paths","counting-rooms"]}},{id:"q-probleme-la-k-ieme-plus-petite-de-l-arbre",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : la k-ième plus petite de l’arbre",question:`
 <p>
   On range des nombres (tous différents, arrivés dans un ordre mélangé) dans un arbre binaire de
   recherche, un par un. Après chaque nouveau nombre, on veut connaître la <em>k</em>-ième plus petite
@@ -14030,7 +14030,7 @@ afficher d[L][C]</code></pre>
   <tr><th>ajouté</th><td>50</td><td>30</td><td>70</td><td>20</td><td>40</td><td>60</td><td>80</td><td>35</td></tr>
   <tr><th>nombres triés</th><td>50</td><td>30 50</td><td>30 50 70</td><td>20 30 50 70</td><td>20 30 40 50 70</td><td>… 40 50 60 70</td><td>… 60 70 80</td><td>20 30 35 40 …</td></tr>
   <tr><th>3e plus petit</th><td>-1</td><td>-1</td><td>70</td><td>50</td><td>40</td><td>40</td><td>40</td><td>35</td></tr>
-</table>`,parent:{goal:"L’arbre binaire de recherche avec la taille des sous-arbres.",followUps:["Que donne k = 1 ? (Le plus petit à chaque fois : 50 30 30 20 20 20 20 20.)","Comment trouver le rang d’un nombre (combien sont plus petits) ? (En descendant vers lui, ajouter g + 1 chaque fois qu’on va à droite.)"],commonMistake:"Oublier d’ajouter 1 aux tailles pendant l’insertion : les tailles seraient fausses et la descente se tromperait de côté.",problems:["salary-queries","list-removals"]}},{id:"q-probleme-le-voisin-le-plus-proche",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le voisin le plus proche",question:`
+</table>`,parent:{goal:"L’arbre binaire de recherche avec la taille des sous-arbres.",followUps:["Que donne k = 1 ? (Le plus petit à chaque fois : 50 30 30 20 20 20 20 20.)","Comment trouver le rang d’un nombre (combien sont plus petits) ? (En descendant vers lui, ajouter g + 1 chaque fois qu’on va à droite.)"],commonMistake:"Oublier d’ajouter 1 aux tailles pendant l’insertion : les tailles seraient fausses et la descente se tromperait de côté.",problems:["k-ieme-plus-petite-de-l-arbre","salary-queries","list-removals"]}},{id:"q-probleme-le-voisin-le-plus-proche",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le voisin le plus proche",question:`
 <p>
   Des maisons sont construites une par une le long d’une route, chacune à une position différente
   (les positions arrivent dans un ordre mélangé). À chaque nouvelle maison (sauf la première), on
@@ -14061,7 +14061,7 @@ pour chaque position v suivante :
   <tr><th>maison</th><td>30</td><td>70</td><td>20</td><td>40</td><td>60</td><td>80</td><td>35</td><td>45</td><td>42</td></tr>
   <tr><th>chemin</th><td>50</td><td>50</td><td>50 30</td><td>50 30</td><td>50 70</td><td>50 70</td><td>50 30 40</td><td>50 30 40</td><td>50 30 40 45</td></tr>
   <tr><th>distance</th><td>20</td><td>20</td><td>10</td><td>10</td><td>10</td><td>10</td><td>5</td><td>5</td><td>2</td></tr>
-</table>`,parent:{goal:"Le prédécesseur et le successeur dans un arbre binaire de recherche.",followUps:["Et si on ajoutait ensuite 41 ? (1 : 42 et 40 sont tous les deux sur le chemin.)","Pourquoi ne pas garder seulement la dernière maison construite ? (La plus proche peut être n’importe laquelle des anciennes.)"],commonMistake:"Ne regarder que le dernier nœud du chemin : pour 42, ce serait 45 (distance 3), alors que 40 est à 2.",problems:["concert-tickets","traffic-lights"]}},{id:"q-probleme-le-meilleur-raccourci",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : le meilleur raccourci",question:`
+</table>`,parent:{goal:"Le prédécesseur et le successeur dans un arbre binaire de recherche.",followUps:["Et si on ajoutait ensuite 41 ? (1 : 42 et 40 sont tous les deux sur le chemin.)","Pourquoi ne pas garder seulement la dernière maison construite ? (La plus proche peut être n’importe laquelle des anciennes.)"],commonMistake:"Ne regarder que le dernier nœud du chemin : pour 42, ce serait 45 (distance 3), alors que 40 est à 2.",problems:["voisin-le-plus-proche","concert-tickets","traffic-lights"]}},{id:"q-probleme-le-meilleur-raccourci",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : le meilleur raccourci",question:`
 <p>
   Un pays a <em>N</em> villes et <em>M</em> routes à double sens. Le maire peut faire construire
   <strong>une seule</strong> nouvelle route, choisie parmi <em>P</em> projets (chacun relie deux
@@ -20196,7 +20196,103 @@ x ^= 1 &lt;&lt; i        # le basculer
   <code>x &amp; -x</code> donne le bit 1 le plus à droite de <em>x</em> (12 = 1100 donne 100 = 4). Et
   <code>bin(x).count("1")</code> compte les bits à 1 d’un nombre.
 </p>
-`},vi:{title:"Mẹo nhị phân"}},18:{fr:{title:"Graphes classiques",blurb:"Les plus courts chemins entre toutes les villes, Dijkstra avec un tas, et les arbres binaires de recherche.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Thuật toán đồ thị kinh điển"}},19:{fr:{title:"Jeux à deux joueurs",blurb:"Positions gagnantes et perdantes, le jeu de Nim, et des stratégies qui gagnent à coup sûr.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Trò chơi hai người"}},20:{fr:{title:"Problèmes de niveau concours",blurb:"Des problèmes de finale avec sous-tâches, où plusieurs idées des chapitres précédents se combinent.",lesson:`
+`},vi:{title:"Mẹo nhị phân"}},18:{fr:{title:"Graphes classiques",blurb:"Les plus courts chemins entre toutes les villes, Dijkstra avec un tas, et les arbres binaires de recherche.",lesson:`
+<h3>Des routes de longueurs différentes</h3>
+<p>
+  Le parcours en largeur trouve le chemin avec le moins de routes. Mais si les routes ont des
+  longueurs différentes (2 km, 15 km…), le chemin le plus court n’est pas forcément celui qui a le
+  moins de routes. Il faut un autre outil.
+</p>
+
+<h3>L’algorithme de Dijkstra</h3>
+<p>
+  Imagine qu’on verse de l’eau à la ville de départ, et qu’elle avance le long des routes à vitesse
+  constante. Les villes sont mouillées une par une, de la plus proche à la plus lointaine. Dijkstra
+  fait exactement ça :
+</p>
+<ol>
+  <li>chaque ville a une distance <em>provisoire</em> (au départ : 0 pour la ville de départ, l’infini pour les autres) ;</li>
+  <li>on <strong>fixe</strong> la ville non fixée de plus petite distance : sa distance est définitive ;</li>
+  <li>on regarde ses routes : pour une route vers <em>v</em> de longueur <em>w</em>, la distance de <em>v</em> devient <code>min(d[v], d[u] + w)</code> ;</li>
+  <li>on recommence.</li>
+</ol>
+<table class="lesson-table">
+  <tr><th>étape</th><th>ville fixée</th><th>distances provisoires (villes 1 à 4)</th></tr>
+  <tr><td>départ</td><td>—</td><td>0 ∞ ∞ ∞</td></tr>
+  <tr><td>1</td><td>1 (0)</td><td>0 7 9 ∞</td></tr>
+  <tr><td>2</td><td>2 (7)</td><td>0 7 9 22</td></tr>
+  <tr><td>3</td><td>3 (9)</td><td>0 7 9 20</td></tr>
+  <tr><td>4</td><td>4 (20)</td><td>0 7 9 20</td></tr>
+</table>
+<p>
+  (Avec les routes 1–2 de 7, 1–3 de 9, 2–4 de 15 et 3–4 de 11.) Pourquoi est-ce juste ? Les longueurs
+  sont positives : la ville la plus proche parmi celles qui restent ne peut pas être atteinte plus vite
+  en passant par une ville plus lointaine. Attention, avec des longueurs négatives, Dijkstra ne marche
+  plus.
+</p>
+
+<h3>Trouver vite la plus proche : le tas</h3>
+<p>
+  Chercher la plus petite distance parmi toutes les villes à chaque étape serait lent. Un
+  <strong>tas</strong> (module <code>heapq</code>) donne toujours le plus petit élément, et en ajoute
+  ou en retire un en quelques étapes.
+</p>
+<pre><code>import heapq
+d = [INF] * (n + 1)
+d[1] = 0
+tas = [(0, 1)]                       # des paires (distance, ville)
+while tas:
+    du, u = heapq.heappop(tas)
+    if du &gt; d[u]:
+        continue                     # une vieille paire, déjà dépassée
+    for v, w in voisins[u]:
+        if du + w &lt; d[v]:
+            d[v] = du + w
+            heapq.heappush(tas, (d[v], v))</code></pre>
+
+<h3>Toutes les distances : Floyd-Warshall</h3>
+<p>
+  Quand il y a peu de villes (une centaine) et qu’on veut la distance entre <strong>toutes</strong>
+  les paires, il existe un algorithme très court. On autorise les villes intermédiaires une par une :
+</p>
+<pre><code>for k in range(1, n + 1):            # on autorise le passage par k
+    for i in range(1, n + 1):
+        for j in range(1, n + 1):
+            d[i][j] = min(d[i][j], d[i][k] + d[k][j])</code></pre>
+<p>
+  La boucle sur <em>k</em> doit être la plus extérieure. Avec des vrai/faux à la place des distances,
+  la même boucle dit qui peut atteindre qui.
+</p>
+
+<h3>L’arbre binaire de recherche</h3>
+<p>
+  Pour ranger des nombres et les retrouver vite, on construit un <strong>arbre binaire de
+  recherche</strong> : chaque nœud a au plus deux enfants, et la règle est toujours la même — à gauche
+  d’un nœud, tout est plus petit ; à droite, tout est plus grand.
+</p>
+<table class="lesson-table">
+  <tr><th>on range</th><td>50</td><td>30</td><td>70</td><td>40</td><td>45</td></tr>
+  <tr><th>chemin pour le placer</th><td>racine</td><td>50, à gauche</td><td>50, à droite</td><td>50 gauche, 30 droite</td><td>50 g, 30 d, 40 d</td></tr>
+</table>
+<p>
+  Pour chercher un nombre, on descend de la même façon : à chaque nœud, on élimine tout un côté. De
+  gauche à droite, l’arbre range les nombres dans l’ordre. En gardant dans chaque nœud la taille de
+  son sous-arbre, on trouve même la <em>k</em>-ième plus petite valeur sans tout parcourir.
+</p>
+<p>
+  Le danger : si les nombres arrivent déjà triés, chaque nouveau va à droite du précédent et l’arbre
+  devient une longue ficelle, aussi lente qu’une liste. Les exercices donnent les nombres dans un
+  ordre mélangé, ce qui garde l’arbre à peu près équilibré.
+</p>
+
+<h3>Pour plus tard</h3>
+<p>
+  Dijkstra depuis le départ <em>et</em> depuis l’arrivée permet de répondre à beaucoup de questions
+  d’un coup : quelles routes sont sur un plus court chemin, quel raccourci construire… Une route
+  <em>a</em>–<em>b</em> de longueur <em>w</em> est sur un plus court chemin exactement quand
+  <code>d1[a] + w + dN[b]</code> vaut la longueur du plus court chemin.
+</p>
+`},vi:{title:"Thuật toán đồ thị kinh điển"}},19:{fr:{title:"Jeux à deux joueurs",blurb:"Positions gagnantes et perdantes, le jeu de Nim, et des stratégies qui gagnent à coup sûr.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Trò chơi hai người"}},20:{fr:{title:"Problèmes de niveau concours",blurb:"Des problèmes de finale avec sous-tâches, où plusieurs idées des chapitres précédents se combinent.",lesson:`
 <h3>Comment est construit un problème de finale</h3>
 <p>
   Les problèmes plus durs ont des <strong>sous-tâches</strong> : la même question, mais avec des limites en
