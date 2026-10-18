@@ -12284,7 +12284,7 @@ afficher passages, echanges</code></pre>
   <tr><th>après le passage</th><td>1</td><td>2</td><td>3</td><td>4</td></tr>
   <tr><th>liste</th><td>1 4 2 5 3 8</td><td>1 2 4 3 5 8</td><td>1 2 3 4 5 8</td><td>1 2 3 4 5 8</td></tr>
   <tr><th>échanges</th><td>4</td><td>2</td><td>1</td><td>0</td></tr>
-</table>`,parent:{goal:"Le tri à bulles : des échanges de voisins, passage après passage.",followUps:["Combien de passages pour une liste déjà rangée ? (1, sans aucun échange.)","Et pour 6 5 4 3 2 1 ? (6 passages et 15 échanges : toutes les paires sont mal rangées.)","Un petit nombre tout à droite recule de combien de places par passage ? (Une seule : c’est pour ça que le 3 de l’exemple demande 3 passages.)"],commonMistake:"Oublier le dernier passage sans échange : on afficherait 3 au lieu de 4.",problems:["distinct-numbers","stick-lengths"]}},{id:"q-probleme-le-tri-par-insertion",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le tri par insertion",question:`
+</table>`,parent:{goal:"Le tri à bulles : des échanges de voisins, passage après passage.",followUps:["Combien de passages pour une liste déjà rangée ? (1, sans aucun échange.)","Et pour 6 5 4 3 2 1 ? (6 passages et 15 échanges : toutes les paires sont mal rangées.)","Un petit nombre tout à droite recule de combien de places par passage ? (Une seule : c’est pour ça que le 3 de l’exemple demande 3 passages.)"],commonMistake:"Oublier le dernier passage sans échange : on afficherait 3 au lieu de 4.",problems:["tri-a-bulles","distinct-numbers","stick-lengths"]}},{id:"q-probleme-le-tri-par-insertion",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le tri par insertion",question:`
 <p>
   Zoé reçoit ses cartes une par une. Elle garde toujours sa main rangée, du plus petit au plus grand.
   Pour chaque nouvelle carte, elle la pose tout à droite, puis la fait glisser vers la gauche tant que
@@ -12316,7 +12316,7 @@ pour chaque carte x :
   <tr><th>carte</th><td>7</td><td>3</td><td>9</td><td>3</td><td>1</td><td>8</td></tr>
   <tr><th>main après</th><td>7</td><td>3 7</td><td>3 7 9</td><td>3 3 7 9</td><td>1 3 3 7 9</td><td>1 3 3 7 8 9</td></tr>
   <tr><th>place</th><td>1</td><td>1</td><td>3</td><td>2</td><td>1</td><td>5</td></tr>
-</table>`,parent:{goal:"Le tri par insertion : glisser chaque nouvel élément à sa place dans une partie déjà triée.",followUps:["Combien de décalages en tout dans l’exemple ? (0 + 1 + 0 + 2 + 4 + 1 = 8.)","Si la carte glissait aussi devant les cartes égales, que changerait-il ? (Le second 3 arriverait à la place 1 ; le tri ne serait plus stable.)"],commonMistake:"Écrire main[j − 1] ≥ x : les cartes égales seraient dépassées, et la réponse changerait (1 1 3 1 1 5).",problems:["towers","distinct-numbers"]}},{id:"q-probleme-le-tri-par-comptage",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le tri par comptage",question:`
+</table>`,parent:{goal:"Le tri par insertion : glisser chaque nouvel élément à sa place dans une partie déjà triée.",followUps:["Combien de décalages en tout dans l’exemple ? (0 + 1 + 0 + 2 + 4 + 1 = 8.)","Si la carte glissait aussi devant les cartes égales, que changerait-il ? (Le second 3 arriverait à la place 1 ; le tri ne serait plus stable.)"],commonMistake:"Écrire main[j − 1] ≥ x : les cartes égales seraient dépassées, et la réponse changerait (1 1 3 1 1 5).",problems:["tri-par-insertion","towers","distinct-numbers"]}},{id:"q-probleme-le-tri-par-comptage",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le tri par comptage",question:`
 <p>
   Après le contrôle, chacun des <em>N</em> élèves a une note entière entre 0 et 20. Le
   <strong>rang</strong> d’un élève, c’est 1 plus le nombre d’élèves qui ont une note strictement
@@ -12346,7 +12346,7 @@ pour chaque note x :
   <tr><th>élèves</th><td>1</td><td>2</td><td>1</td><td>2</td><td>1</td></tr>
   <tr><th>meilleurs</th><td>0</td><td>1</td><td>3</td><td>4</td><td>6</td></tr>
   <tr><th>rang</th><td>1</td><td>2</td><td>4</td><td>5</td><td>7</td></tr>
-</table>`,parent:{goal:"Le tri par comptage : compter les valeurs au lieu de les comparer.",followUps:["Pourquoi aucun élève n’a le rang 3 ? (Deux élèves sont à égalité au rang 2 : le suivant est 4e.)","Comment afficher toutes les notes triées avec cnt ? (Pour v de 0 à 20, afficher v exactement cnt[v] fois.)"],commonMistake:"Compter les élèves de note supérieure ou égale : un élève se compterait lui-même et ses ex æquo.",problems:["distinct-numbers","tied-candidates"]}},{id:"q-probleme-le-tri-du-facteur",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le tri du facteur",question:`
+</table>`,parent:{goal:"Le tri par comptage : compter les valeurs au lieu de les comparer.",followUps:["Pourquoi aucun élève n’a le rang 3 ? (Deux élèves sont à égalité au rang 2 : le suivant est 4e.)","Comment afficher toutes les notes triées avec cnt ? (Pour v de 0 à 20, afficher v exactement cnt[v] fois.)"],commonMistake:"Compter les élèves de note supérieure ou égale : un élève se compterait lui-même et ses ex æquo.",problems:["tri-par-comptage","distinct-numbers","tied-candidates"]}},{id:"q-probleme-le-tri-du-facteur",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le tri du facteur",question:`
 <p>
   Un facteur range ses lettres d’après leur numéro. Il a 10 casiers, de 0 à 9. Au premier passage,
   il met chaque lettre dans le casier de son <strong>chiffre des unités</strong>, en gardant l’ordre,
@@ -12378,7 +12378,7 @@ afficher paquet</code></pre>
   <tr><th>passage</th><td>départ</td><td>1 (unités)</td><td>2 (dizaines)</td></tr>
   <tr><th>paquet</th><td>170 45 75 90 802 24 2 66</td><td>170 90 802 2 24 45 75 66</td><td>802 2 24 45 66 170 75 90</td></tr>
 </table>
-<p>Après 2 passages, les numéros sont triés d’après leurs deux derniers chiffres : 02, 02, 24, 45, 66, 70, 75, 90. Un troisième passage trierait tout.</p>`,parent:{goal:"Le tri par base : des tris par comptage successifs, chiffre par chiffre, en gardant l’ordre.",followUps:["Que donne un troisième passage ? (2 24 45 66 75 90 170 802 : tout est trié.)","Pourquoi faut-il garder l’ordre dans chaque casier ? (Sinon le passage des dizaines détruirait le rangement des unités.)"],commonMistake:"Commencer par le chiffre le plus à gauche avec cette méthode : le paquet final ne serait pas trié.",problems:["distinct-numbers","dictionary"]}},{id:"q-probleme-le-palmares",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le palmarès",question:`
+<p>Après 2 passages, les numéros sont triés d’après leurs deux derniers chiffres : 02, 02, 24, 45, 66, 70, 75, 90. Un troisième passage trierait tout.</p>`,parent:{goal:"Le tri par base : des tris par comptage successifs, chiffre par chiffre, en gardant l’ordre.",followUps:["Que donne un troisième passage ? (2 24 45 66 75 90 170 802 : tout est trié.)","Pourquoi faut-il garder l’ordre dans chaque casier ? (Sinon le passage des dizaines détruirait le rangement des unités.)"],commonMistake:"Commencer par le chiffre le plus à gauche avec cette méthode : le paquet final ne serait pas trié.",problems:["tri-du-facteur","distinct-numbers","dictionary"]}},{id:"q-probleme-le-palmares",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le palmarès",question:`
 <p>
   Au tournoi de l’école, chaque joueur a un nom, des points et des pénalités. Le palmarès est rangé
   ainsi : d’abord le plus de points ; à égalité de points, le moins de pénalités ; et encore à
@@ -12404,7 +12404,7 @@ afficher les noms dans cet ordre</code></pre>
   <tr><th>joueur</th><td>lea</td><td>tom</td><td>ines</td><td>paul</td><td>zoe</td><td>max</td></tr>
   <tr><th>clé</th><td>(−12, 3, lea)</td><td>(−15, 5, tom)</td><td>(−12, 1, ines)</td><td>(−15, 5, paul)</td><td>(−9, 0, zoe)</td><td>(−12, 1, max)</td></tr>
   <tr><th>place</th><td>5</td><td>2</td><td>3</td><td>1</td><td>6</td><td>4</td></tr>
-</table>`,parent:{goal:"Trier selon plusieurs critères avec une clé.",followUps:["Et si on rangeait les noms à l’envers à égalité ? (On ne peut pas mettre un signe moins devant un nom : il faut trier deux fois, ou écrire sa propre comparaison.)","Et si zoe avait 15 points et 0 pénalité ? (zoe paul tom ines max lea.)"],commonMistake:"Oublier le signe moins : le palmarès serait à l’envers pour les points (zoe en premier).",problems:["tied-candidates","election-ii"]}},{id:"q-probleme-le-drapeau-tricolore",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le drapeau tricolore",question:`
+</table>`,parent:{goal:"Trier selon plusieurs critères avec une clé.",followUps:["Et si on rangeait les noms à l’envers à égalité ? (On ne peut pas mettre un signe moins devant un nom : il faut trier deux fois, ou écrire sa propre comparaison.)","Et si zoe avait 15 points et 0 pénalité ? (zoe paul tom ines max lea.)"],commonMistake:"Oublier le signe moins : le palmarès serait à l’envers pour les points (zoe en premier).",problems:["palmares","tied-candidates","election-ii"]}},{id:"q-probleme-le-drapeau-tricolore",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le drapeau tricolore",question:`
 <p>
   Une rangée de <em>N</em> fanions : chacun est bleu (1), blanc (2) ou rouge (3). On veut les ranger
   comme un drapeau : tous les bleus à gauche, puis les blancs, puis les rouges. En un coup, on peut
@@ -12437,7 +12437,7 @@ afficher directs + 2 × (reste / 3)</code></pre>
   <tr><th>blancs</th><td>2</td><td>0</td><td>1</td></tr>
   <tr><th>rouges</th><td>0</td><td>2</td><td>0</td></tr>
 </table>
-<p>Les cases hors de la diagonale sont les fanions mal placés : il y en a 7, rangés en 2 paires et 1 trio.</p>`,parent:{goal:"Compter les éléments mal placés par zone pour trouver le nombre minimal d’échanges.",followUps:["Que répondre pour 3 2 1 ? (1 : on échange le premier et le dernier.)","Et pour 2 3 1 ? (2 : c’est un trio.)","Pourquoi le reste est-il toujours un multiple de 3 ? (Chaque zone a autant de places que de fanions de sa couleur : ce qui sort d’une zone y rentre ailleurs, en tournant.)"],commonMistake:"Diviser le nombre de fanions mal placés par 2 : ici 7 / 2 ne donne même pas un nombre entier, car un trio demande 2 échanges et non 1,5.",problems:["swapped-places","stick-lengths"]}},{id:"q-probleme-le-plus-grand-nombre",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le plus grand nombre",question:`
+<p>Les cases hors de la diagonale sont les fanions mal placés : il y en a 7, rangés en 2 paires et 1 trio.</p>`,parent:{goal:"Compter les éléments mal placés par zone pour trouver le nombre minimal d’échanges.",followUps:["Que répondre pour 3 2 1 ? (1 : on échange le premier et le dernier.)","Et pour 2 3 1 ? (2 : c’est un trio.)","Pourquoi le reste est-il toujours un multiple de 3 ? (Chaque zone a autant de places que de fanions de sa couleur : ce qui sort d’une zone y rentre ailleurs, en tournant.)"],commonMistake:"Diviser le nombre de fanions mal placés par 2 : ici 7 / 2 ne donne même pas un nombre entier, car un trio demande 2 échanges et non 1,5.",problems:["drapeau-tricolore","swapped-places","stick-lengths"]}},{id:"q-probleme-le-plus-grand-nombre",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le plus grand nombre",question:`
 <p>
   On a <em>N</em> étiquettes, chacune avec un nombre. On les colle les unes à la suite des autres,
   dans l’ordre qu’on veut, pour écrire un très grand nombre. Par exemple avec 34 et 3, on peut écrire
@@ -12464,7 +12464,7 @@ afficher les étiquettes collées dans cet ordre</code></pre>
   <tr><th>paire</th><td>9 et 34</td><td>34 et 3</td><td>3 et 30</td><td>5 et 34</td></tr>
   <tr><th>collages</th><td>934 / 349</td><td>343 / 334</td><td>330 / 303</td><td>534 / 345</td></tr>
   <tr><th>devant</th><td>9</td><td>34</td><td>3</td><td>5</td></tr>
-</table>`,parent:{goal:"Trier avec sa propre règle de comparaison.",followUps:["Pour 12 et 121 ? (12121 > 12112 : 12 passe devant.)","Pourquoi ne pas trier les textes dans l’ordre inverse du dictionnaire ? (Pour 8 et 82, « 82 » vient après « 8 » dans le dictionnaire : l’ordre inverse colle 828, alors que 882 est plus grand.)"],commonMistake:"Trier les nombres par valeur décroissante : on écrirait 3430953 au lieu de 9534330.",problems:["dictionary","creating-strings"]}},{id:"q-probleme-le-k-ieme-plus-petit",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le k-ième plus petit",question:`
+</table>`,parent:{goal:"Trier avec sa propre règle de comparaison.",followUps:["Pour 12 et 121 ? (12121 > 12112 : 12 passe devant.)","Pourquoi ne pas trier les textes dans l’ordre inverse du dictionnaire ? (Pour 8 et 82, « 82 » vient après « 8 » dans le dictionnaire : l’ordre inverse colle 828, alors que 882 est plus grand.)"],commonMistake:"Trier les nombres par valeur décroissante : on écrirait 3430953 au lieu de 9534330.",problems:["plus-grand-nombre","dictionary","creating-strings"]}},{id:"q-probleme-le-k-ieme-plus-petit",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le k-ième plus petit",question:`
 <p>
   Au concours de lancer, <em>N</em> enfants ont lancé une balle, et on connaît chaque distance. Le
   jury veut seulement connaître la <em>k</em>-ième plus petite distance (la plus petite est la 1re).
@@ -12499,7 +12499,7 @@ afficher les étiquettes collées dans cet ordre</code></pre>
   <tr><th>k</th><td>4</td><td>1</td><td>1</td><td>1</td></tr>
   <tr><th>pivot</th><td>7</td><td>38</td><td>30</td><td>15</td></tr>
   <tr><th>petits / égaux</th><td>1 / 2</td><td>4 / 1</td><td>3 / 1</td><td>0 / 1</td></tr>
-</table>`,parent:{goal:"La sélection rapide : séparer autour d’un pivot et ne garder que le bon morceau.",followUps:["Que donne k = 9 ? (41, la plus grande.)","Avec quelle liste le pivot du milieu serait-il toujours mauvais ? (Une liste construite exprès pour que le milieu soit toujours le plus petit : chaque tour n’enlève qu’un élément. Un pivot au hasard évite ce piège.)"],commonMistake:"Oublier le groupe des égaux : avec plusieurs distances égales au pivot, la boucle peut ne jamais s’arrêter.",problems:["stick-lengths","sliding-window-median"]}},{id:"q-probleme-la-somme-des-ecarts",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : la somme des écarts",question:`
+</table>`,parent:{goal:"La sélection rapide : séparer autour d’un pivot et ne garder que le bon morceau.",followUps:["Que donne k = 9 ? (41, la plus grande.)","Avec quelle liste le pivot du milieu serait-il toujours mauvais ? (Une liste construite exprès pour que le milieu soit toujours le plus petit : chaque tour n’enlève qu’un élément. Un pivot au hasard évite ce piège.)"],commonMistake:"Oublier le groupe des égaux : avec plusieurs distances égales au pivot, la boucle peut ne jamais s’arrêter.",problems:["k-ieme-plus-petit","stick-lengths","sliding-window-median"]}},{id:"q-probleme-la-somme-des-ecarts",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : la somme des écarts",question:`
 <p>
   <em>N</em> maisons sont le long d’une route droite, chacune à une position (un nombre entier). Pour
   chaque paire de maisons, on mesure leur écart (la distance entre elles). Quelle est la somme de
@@ -12527,7 +12527,7 @@ afficher total</code></pre>
   <tr><th>position triée</th><td>1</td><td>3</td><td>4</td><td>7</td><td>10</td></tr>
   <tr><th>coefficient</th><td>-4</td><td>-2</td><td>0</td><td>2</td><td>4</td></tr>
   <tr><th>apport</th><td>-4</td><td>-6</td><td>0</td><td>14</td><td>40</td></tr>
-</table>`,parent:{goal:"Trier d’abord pour transformer un calcul sur toutes les paires en une seule somme.",followUps:["Que vaut la somme pour 5 5 5 ? (0.)","Pourquoi la réponse peut-elle dépasser 10<sup>18</sup> ? (Environ 2 × 10<sup>10</sup> paires, chacune jusqu’à 2 × 10<sup>9</sup> : il faut des grands entiers dans certains langages, pas en Python.)"],commonMistake:"Oublier de trier : les signes des coefficients ne correspondent plus aux bonnes paires.",problems:["stick-lengths","minimum-distance"]}},{id:"q-probleme-le-tri-par-le-dessus",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le tri par le dessus",question:`
+</table>`,parent:{goal:"Trier d’abord pour transformer un calcul sur toutes les paires en une seule somme.",followUps:["Que vaut la somme pour 5 5 5 ? (0.)","Pourquoi la réponse peut-elle dépasser 10<sup>18</sup> ? (Environ 2 × 10<sup>10</sup> paires, chacune jusqu’à 2 × 10<sup>9</sup> : il faut des grands entiers dans certains langages, pas en Python.)"],commonMistake:"Oublier de trier : les signes des coefficients ne correspondent plus aux bonnes paires.",problems:["somme-des-ecarts","stick-lengths","minimum-distance"]}},{id:"q-probleme-le-tri-par-le-dessus",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le tri par le dessus",question:`
 <p>
   Une pile de <em>N</em> livres, numérotés de 1 à <em>N</em>, est dans le désordre. On les lit du
   dessus vers le dessous. En un coup, on peut prendre <strong>n’importe quel livre</strong> et le
@@ -12555,7 +12555,7 @@ afficher N − m</code></pre>
   <tr><th>livre</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
   <tr><th>place</th><td>2</td><td>4</td><td>1</td><td>6</td><td>3</td><td>5</td></tr>
   <tr><th>reste ?</th><td>non</td><td>non</td><td>non</td><td>non</td><td>oui</td><td>oui</td></tr>
-</table>`,parent:{goal:"Trouver ce qui est déjà trié pour compter ce qu’il faut bouger.",followUps:["Que répondre pour la pile 1 2 3 4 ? (0.)","Et pour 2 3 4 1 ? (1 : les livres 2, 3 et 4 sont déjà dans l’ordre, on pose seulement 1 sur le dessus.)"],commonMistake:"Compter les livres qui ne sont pas à leur place : la pile 2 3 4 1 n’a aucun livre à sa place, mais un seul coup suffit.",problems:["collecting-numbers","book-tidying"]}},{id:"q-probleme-le-classement-des-coureurs",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : le classement des coureurs",question:`
+</table>`,parent:{goal:"Trouver ce qui est déjà trié pour compter ce qu’il faut bouger.",followUps:["Que répondre pour la pile 1 2 3 4 ? (0.)","Et pour 2 3 4 1 ? (1 : les livres 2, 3 et 4 sont déjà dans l’ordre, on pose seulement 1 sur le dessus.)"],commonMistake:"Compter les livres qui ne sont pas à leur place : la pile 2 3 4 1 n’a aucun livre à sa place, mais un seul coup suffit.",problems:["tri-par-le-dessus","collecting-numbers","book-tidying"]}},{id:"q-probleme-le-classement-des-coureurs",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : le classement des coureurs",question:`
 <p>
   Une course a <em>N</em> coureurs, partis l’un après l’autre. On connaît le temps de chacun, dans
   l’ordre des départs (tous les temps sont différents). Pour chaque coureur, combien de coureurs
@@ -19955,7 +19955,89 @@ def visiter(v):
   <code>sys.setrecursionlimit(10000)</code> au début. Pour de très grands graphes, on remplace la
   récursion par une pile qu’on gère soi-même (une liste avec <code>append</code> et <code>pop</code>).
 </p>
-`},vi:{title:"Duyệt theo chiều sâu"}},15:{fr:{title:"Algorithmes de tri",blurb:"Tri par insertion, tri fusion et tri par comptage, et combien d’étapes chacun demande.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Thuật toán sắp xếp"}},16:{fr:{title:"Simulation et automates",blurb:"Suivre les règles pas à pas : des robots sur une grille, des grilles qui changent, des files d’attente.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Mô phỏng và ô-tô-mát"}},17:{fr:{title:"Astuces binaires",blurb:"Les nombres écrits avec des 0 et des 1 : le XOR, les masques, et tous les sous-ensembles avec un seul compteur.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Mẹo nhị phân"}},18:{fr:{title:"Graphes classiques",blurb:"Les plus courts chemins entre toutes les villes, Dijkstra avec un tas, et les arbres binaires de recherche.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Thuật toán đồ thị kinh điển"}},19:{fr:{title:"Jeux à deux joueurs",blurb:"Positions gagnantes et perdantes, le jeu de Nim, et des stratégies qui gagnent à coup sûr.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Trò chơi hai người"}},20:{fr:{title:"Problèmes de niveau concours",blurb:"Des problèmes de finale avec sous-tâches, où plusieurs idées des chapitres précédents se combinent.",lesson:`
+`},vi:{title:"Duyệt theo chiều sâu"}},15:{fr:{title:"Algorithmes de tri",blurb:"Tri par insertion, tri fusion et tri par comptage, et combien d’étapes chacun demande.",lesson:`
+<h3>Comment un ordinateur range-t-il ?</h3>
+<p>
+  En Python, <code>sorted(liste)</code> range une liste en un instant. Mais comment fait-il ? Ce
+  chapitre ouvre la boîte : on regarde plusieurs façons de trier, lentes et rapides, et surtout les
+  <strong>idées</strong> qu’elles cachent, qui servent dans plein d’autres problèmes.
+</p>
+
+<h3>Le tri à bulles</h3>
+<p>
+  On parcourt la liste de gauche à droite et on échange deux voisins quand ils sont dans le mauvais
+  ordre. Après un passage, le plus grand est tout à droite. On recommence jusqu’à un passage sans
+  échange.
+</p>
+<table class="lesson-table">
+  <tr><th>départ</th><td>5 1 4 2</td></tr>
+  <tr><th>passage 1</th><td>1 4 2 5</td></tr>
+  <tr><th>passage 2</th><td>1 2 4 5</td></tr>
+  <tr><th>passage 3</th><td>1 2 4 5 (aucun échange : fini)</td></tr>
+</table>
+<p>Pour <em>N</em> nombres, il faut jusqu’à <em>N</em> × <em>N</em> comparaisons : 10 000 milliards pour 10 millions de nombres. Bien trop lent pour les grandes listes.</p>
+
+<h3>Le tri par insertion</h3>
+<p>
+  Comme quand on range ses cartes : la main est toujours triée, et chaque nouvelle carte glisse vers
+  la gauche jusqu’à sa place. C’est lent en général, mais très rapide si la liste est presque triée.
+  Il est <strong>stable</strong> : deux éléments égaux gardent leur ordre.
+</p>
+
+<h3>Diviser pour régner : le tri fusion</h3>
+<p>
+  Pour trier une liste, on la coupe en deux, on trie chaque moitié (en s’appelant soi-même !), puis on
+  <strong>fusionne</strong> les deux moitiés triées : on regarde le premier de chaque moitié, on sort
+  le plus petit, et on recommence.
+</p>
+<table class="lesson-table">
+  <tr><th>moitié gauche</th><td>2 5 8</td><td>5 8</td><td>5 8</td><td>8</td><td>8</td><td>—</td></tr>
+  <tr><th>moitié droite</th><td>3 4 9</td><td>3 4 9</td><td>4 9</td><td>9</td><td>9</td><td>9</td></tr>
+  <tr><th>sortie</th><td>2</td><td>2 3</td><td>2 3 4</td><td>2 3 4 5</td><td>… 8</td><td>… 9</td></tr>
+</table>
+<p>
+  Chaque niveau de découpage coûte <em>N</em> opérations, et il y a environ log<sub>2</sub>
+  <em>N</em> niveaux (20 pour un million). C’est ce genre de tri rapide qu’utilise Python.
+</p>
+
+<h3>Le tri rapide et la sélection rapide</h3>
+<p>
+  On choisit un <strong>pivot</strong>, on met à gauche les plus petits et à droite les plus grands,
+  puis on trie chaque côté. Si on cherche seulement le <em>k</em>-ième plus petit, inutile de tout
+  trier : on ne continue que du côté qui le contient.
+</p>
+
+<h3>Trier sans comparer</h3>
+<p>
+  Quand les valeurs sont petites (des notes de 0 à 20), on peut simplement <strong>compter</strong>
+  combien il y a de chaque valeur, puis les ressortir dans l’ordre : c’est le <strong>tri par
+  comptage</strong>. En le répétant chiffre par chiffre (unités, puis dizaines…), on obtient le
+  <strong>tri par base</strong>.
+</p>
+
+<h3>Trier avec sa propre règle</h3>
+<p>
+  <code>sorted</code> accepte une <strong>clé</strong> : <code>sorted(joueurs, key=lambda j: (-j[1],
+  j[0]))</code> range par points décroissants, puis par nom. Pour une règle encore plus libre (« a
+  passe devant b si… »), on écrit une fonction qui compare deux éléments et on la donne à
+  <code>functools.cmp_to_key</code>.
+</p>
+
+<h3>Trier pour simplifier</h3>
+<p>
+  Souvent, le tri n’est pas le but, mais il rend le problème facile : la somme des écarts entre toutes
+  les paires, les plus petits écarts, les blocs qu’on peut trier séparément… Quand un problème parle
+  de « plus petit », « plus grand » ou « entre deux valeurs », demande-toi toujours : <em>et si je
+  triais d’abord ?</em>
+</p>
+
+<h3>Pour plus tard</h3>
+<p>
+  On peut prouver qu’un tri qui ne fait que comparer des éléments a besoin d’environ
+  <em>N</em> × log<sub>2</sub> <em>N</em> comparaisons au minimum. Le tri par comptage échappe à cette
+  règle parce qu’il ne compare jamais : il profite de ce que les valeurs sont petites.
+</p>
+`},vi:{title:"Thuật toán sắp xếp"}},16:{fr:{title:"Simulation et automates",blurb:"Suivre les règles pas à pas : des robots sur une grille, des grilles qui changent, des files d’attente.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Mô phỏng và ô-tô-mát"}},17:{fr:{title:"Astuces binaires",blurb:"Les nombres écrits avec des 0 et des 1 : le XOR, les masques, et tous les sous-ensembles avec un seul compteur.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Mẹo nhị phân"}},18:{fr:{title:"Graphes classiques",blurb:"Les plus courts chemins entre toutes les villes, Dijkstra avec un tas, et les arbres binaires de recherche.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Thuật toán đồ thị kinh điển"}},19:{fr:{title:"Jeux à deux joueurs",blurb:"Positions gagnantes et perdantes, le jeu de Nim, et des stratégies qui gagnent à coup sûr.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Trò chơi hai người"}},20:{fr:{title:"Problèmes de niveau concours",blurb:"Des problèmes de finale avec sous-tâches, où plusieurs idées des chapitres précédents se combinent.",lesson:`
 <h3>Comment est construit un problème de finale</h3>
 <p>
   Les problèmes plus durs ont des <strong>sous-tâches</strong> : la même question, mais avec des limites en
