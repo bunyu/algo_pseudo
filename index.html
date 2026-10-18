@@ -11736,7 +11736,7 @@ visiter(1)</code></pre>
   <tr><th>place découverte</th><td>1</td><td>2</td><td>3</td><td>7</td><td>4</td><td>6</td><td>5</td></tr>
   <tr><th>appels en cours</th><td>1</td><td>1 2</td><td>1 2 3</td><td>1 2 3 7</td><td>1 2 4</td><td>1 2 4 6</td><td>1 2 4 6 5</td></tr>
 </table>
-<p>La ligne du bas montre la « pile » des appels : quand une place n’a plus de voisine neuve, elle disparaît de la pile, et on repart de celle d’avant.</p>`,parent:{goal:"Le parcours en profondeur : aller le plus loin possible, revenir en arrière quand on est coincé.",followUps:["Et si la règle était de prendre le plus grand numéro ? (1 5 6 4 2 3 7.)","Que se passe-t-il pour une place qu’aucune rue ne relie aux autres ? (Elle n’est jamais affichée.)","Pourquoi le tableau vu est-il indispensable ? (Sans lui, 1 → 2 → 1 → 2… sans fin.)"],commonMistake:"Marquer la place comme vue seulement après avoir visité ses voisines : la même place serait visitée plusieurs fois.",problems:["counting-rooms","building-roads"]}},{id:"q-probleme-la-profondeur-de-l-arbre",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la profondeur de l’arbre",question:`
+<p>La ligne du bas montre la « pile » des appels : quand une place n’a plus de voisine neuve, elle disparaît de la pile, et on repart de celle d’avant.</p>`,parent:{goal:"Le parcours en profondeur : aller le plus loin possible, revenir en arrière quand on est coincé.",followUps:["Et si la règle était de prendre le plus grand numéro ? (1 5 6 4 2 3 7.)","Que se passe-t-il pour une place qu’aucune rue ne relie aux autres ? (Elle n’est jamais affichée.)","Pourquoi le tableau vu est-il indispensable ? (Sans lui, 1 → 2 → 1 → 2… sans fin.)"],commonMistake:"Marquer la place comme vue seulement après avoir visité ses voisines : la même place serait visitée plusieurs fois.",problems:["ordre-de-visite","counting-rooms","building-roads"]}},{id:"q-probleme-la-profondeur-de-l-arbre",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la profondeur de l’arbre",question:`
 <p>
   Un arbre généalogique a <em>N</em> personnes, numérotées de 1 à <em>N</em>. La personne 1 est
   l’ancêtre de tout le monde. On donne les <em>N</em> − 1 liens parent–enfant (sans dire lequel est
@@ -11768,7 +11768,7 @@ afficher haut(1, 0)</code></pre>
   <tr><th>personne</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
   <tr><th>hauteur</th><td>4</td><td>3</td><td>1</td><td>0</td><td>2</td><td>1</td><td>0</td><td>0</td></tr>
 </table>
-<p>Les hauteurs se calculent du bas vers le haut : d’abord 8 (0), puis 6 (1), puis 5 (2), puis 2 (3), et enfin 1 (4).</p>`,parent:{goal:"Faire remonter une réponse des feuilles vers la racine d’un arbre.",followUps:["Quelle est la hauteur de la personne 3 ? (1 : son enfant 7 n’a pas d’enfant.)","Que répondre pour N = 1 ? (0.)","Pourquoi passer le parent en argument ? (Sans lui, 2 croirait que 1 est son enfant, et 1 que 2 est le sien : sans fin.)"],commonMistake:"Oublier d’ignorer le parent : la fonction rebondit entre deux personnes sans jamais s’arrêter.",problems:["building-roads","counting-rooms"]}},{id:"q-probleme-la-taille-des-iles",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la taille des îles",question:`
+<p>Les hauteurs se calculent du bas vers le haut : d’abord 8 (0), puis 6 (1), puis 5 (2), puis 2 (3), et enfin 1 (4).</p>`,parent:{goal:"Faire remonter une réponse des feuilles vers la racine d’un arbre.",followUps:["Quelle est la hauteur de la personne 3 ? (1 : son enfant 7 n’a pas d’enfant.)","Que répondre pour N = 1 ? (0.)","Pourquoi passer le parent en argument ? (Sans lui, 2 croirait que 1 est son enfant, et 1 que 2 est le sien : sans fin.)"],commonMistake:"Oublier d’ignorer le parent : la fonction rebondit entre deux personnes sans jamais s’arrêter.",problems:["profondeur-de-l-arbre","building-roads","counting-rooms"]}},{id:"q-probleme-la-taille-des-iles",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la taille des îles",question:`
 <p>
   Une carte est une grille de <em>L</em> lignes et <em>C</em> colonnes. Chaque case est de la terre
   <code>#</code> ou de l’eau <code>.</code>. Deux cases de terre qui se touchent par un côté sont sur
@@ -11804,7 +11804,7 @@ afficher le nombre d’éléments de tailles, puis tailles</code></pre>
   <tr><th>île</th><td>en haut à gauche</td><td>en haut à droite</td><td>en bas à gauche</td><td>en bas à droite</td></tr>
   <tr><th>trouvée depuis</th><td>(0, 0)</td><td>(0, 4)</td><td>(2, 2)</td><td>(3, 4)</td></tr>
   <tr><th>taille</th><td>3</td><td>3</td><td>4</td><td>1</td></tr>
-</table>`,parent:{goal:"Le parcours en profondeur sur une grille, qui compte les cases d’une région.",followUps:["Et si les cases qui se touchent par un coin étaient aussi sur la même île ? (Il faudrait regarder 8 voisines : l’île en haut à droite touche celle de 4 par un coin, réponse 3 7 3 1.)","Combien d’îles pour une carte sans terre ? (0, et aucune taille.)"],commonMistake:"Marquer la case seulement à la fin de explorer : deux voisines peuvent alors compter la même case.",problems:["counting-rooms","oil-spill"]}},{id:"q-probleme-le-chemin-dans-l-arbre",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le chemin dans l’arbre",question:`
+</table>`,parent:{goal:"Le parcours en profondeur sur une grille, qui compte les cases d’une région.",followUps:["Et si les cases qui se touchent par un coin étaient aussi sur la même île ? (Il faudrait regarder 8 voisines : l’île en haut à droite touche celle de 4 par un coin, réponse 3 7 3 1.)","Combien d’îles pour une carte sans terre ? (0, et aucune taille.)"],commonMistake:"Marquer la case seulement à la fin de explorer : deux voisines peuvent alors compter la même case.",problems:["taille-des-iles","counting-rooms","oil-spill"]}},{id:"q-probleme-le-chemin-dans-l-arbre",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le chemin dans l’arbre",question:`
 <p>
   Un parc a <em>N</em> cabanes, numérotées de 1 à <em>N</em>, reliées par <em>N</em> − 1 ponts. On
   peut aller de n’importe quelle cabane à n’importe quelle autre, et il n’y a qu’un seul chemin sans
@@ -11838,7 +11838,7 @@ afficher route</code></pre>
   <tr><th>on entre en</th><td>4</td><td>2</td><td>5</td><td>6</td><td>8</td><td>1</td><td>3</td><td>7</td></tr>
   <tr><th>route</th><td>4</td><td>4 2</td><td>4 2 5</td><td>4 2 5 6</td><td>4 2 5 6 8</td><td>4 2 1</td><td>4 2 1 3</td><td>4 2 1 3 7</td></tr>
 </table>
-<p>Après 8, cul-de-sac : on enlève 8, puis 6, puis 5, et on repart de 2 vers 1.</p>`,parent:{goal:"Garder le chemin en cours pendant un parcours en profondeur : ajouter en entrant, enlever en repartant.",followUps:["Et le chemin de 8 à 4 ? (8 6 5 2 4.)","Que répondre si a = b ? (Juste a.)","Comment avoir seulement le nombre de ponts du chemin ? (La longueur de la route moins 1.)"],commonMistake:"Oublier d’enlever la cabane en cas d’échec : la route garderait les culs-de-sac (4 2 5 6 8 1 3 7).",problems:["building-roads","road-construction"]}},{id:"q-probleme-la-meilleure-branche",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la meilleure branche",question:`
+<p>Après 8, cul-de-sac : on enlève 8, puis 6, puis 5, et on repart de 2 vers 1.</p>`,parent:{goal:"Garder le chemin en cours pendant un parcours en profondeur : ajouter en entrant, enlever en repartant.",followUps:["Et le chemin de 8 à 4 ? (8 6 5 2 4.)","Que répondre si a = b ? (Juste a.)","Comment avoir seulement le nombre de ponts du chemin ? (La longueur de la route moins 1.)"],commonMistake:"Oublier d’enlever la cabane en cas d’échec : la route garderait les culs-de-sac (4 2 5 6 8 1 3 7).",problems:["chemin-dans-l-arbre","building-roads","road-construction"]}},{id:"q-probleme-la-meilleure-branche",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la meilleure branche",question:`
 <p>
   Un écureuil est au pied d’un arbre, au nœud 1. L’arbre a <em>N</em> nœuds, et chaque nœud porte
   des noisettes : un nombre, parfois négatif (une branche abîmée qui fait perdre des noisettes).
@@ -11870,7 +11870,7 @@ afficher meilleure(1, 0)</code></pre>
   <tr><th>nœud</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
   <tr><th>noisettes</th><td>3</td><td>2</td><td>5</td><td>9</td><td>1</td><td>4</td><td>6</td></tr>
   <tr><th>meilleur total</th><td>14</td><td>11</td><td>11</td><td>9</td><td>1</td><td>4</td><td>6</td></tr>
-</table>`,parent:{goal:"Une récursion sur un arbre qui choisit le meilleur enfant.",followUps:["Et si le nœud 4 avait −9 noisettes ? (Toujours 14, par la droite : 3 + 5 + 6.)","Et si on pouvait s’arrêter où on veut ? (Il faudrait remplacer un total d’enfant négatif par 0.)"],commonMistake:"Remplacer le maximum des enfants par 0 quand il est négatif : l’écureuil s’arrêterait au milieu d’une branche, ce qui est interdit.",problems:["building-roads","game-routes"]}},{id:"q-probleme-le-cycle-des-prerequis",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le cycle des prérequis",question:`
+</table>`,parent:{goal:"Une récursion sur un arbre qui choisit le meilleur enfant.",followUps:["Et si le nœud 4 avait −9 noisettes ? (Toujours 14, par la droite : 3 + 5 + 6.)","Et si on pouvait s’arrêter où on veut ? (Il faudrait remplacer un total d’enfant négatif par 0.)"],commonMistake:"Remplacer le maximum des enfants par 0 quand il est négatif : l’écureuil s’arrêterait au milieu d’une branche, ce qui est interdit.",problems:["meilleure-branche","building-roads","game-routes"]}},{id:"q-probleme-le-cycle-des-prerequis",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le cycle des prérequis",question:`
 <p>
   Un jeu a <em>N</em> niveaux, numérotés de 1 à <em>N</em>. Chaque règle « <em>a</em> <em>b</em> »
   dit : il faut finir le niveau <em>a</em> avant de pouvoir jouer au niveau <em>b</em>. Le créateur du
@@ -11906,7 +11906,7 @@ afficher « NON »</code></pre>
   <tr><th>appel</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
   <tr><th>niveaux gris</th><td>1</td><td>1 2</td><td>1 2 3</td><td>1 2 3 4</td><td>1 2 3 4 5</td><td>1 2 3 4 5 6</td></tr>
   <tr><th>flèches regardées</th><td>1 → 2</td><td>2 → 3</td><td>3 → 4</td><td>4 → 5</td><td>5 → 6</td><td>6 → 3 : gris !</td></tr>
-</table>`,parent:{goal:"Trouver une boucle dans un graphe orienté avec trois couleurs : blanc, gris, noir.",followUps:["Et sans la règle 4 5 ? (NON : alors 6 → 3 arrive sur un niveau noir ou blanc, jamais gris.)","Pourquoi deux couleurs (vu / pas vu) ne suffisent pas ? (Avec 1 → 2, 1 → 3, 3 → 2, on arrive deux fois en 2 sans aucune boucle.)","Quel est le lien avec le tri topologique ? (On peut ranger les niveaux dans un ordre qui respecte toutes les règles exactement quand il n’y a pas de boucle.)"],commonMistake:"Dire « boucle » dès qu’on retombe sur un niveau déjà vu : deux chemins qui se rejoignent ne font pas une boucle.",problems:["course-schedule","flight-routes-check"]}},{id:"q-probleme-les-lacs-de-l-ile",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : les lacs de l’île",question:`
+</table>`,parent:{goal:"Trouver une boucle dans un graphe orienté avec trois couleurs : blanc, gris, noir.",followUps:["Et sans la règle 4 5 ? (NON : alors 6 → 3 arrive sur un niveau noir ou blanc, jamais gris.)","Pourquoi deux couleurs (vu / pas vu) ne suffisent pas ? (Avec 1 → 2, 1 → 3, 3 → 2, on arrive deux fois en 2 sans aucune boucle.)","Quel est le lien avec le tri topologique ? (On peut ranger les niveaux dans un ordre qui respecte toutes les règles exactement quand il n’y a pas de boucle.)"],commonMistake:"Dire « boucle » dès qu’on retombe sur un niveau déjà vu : deux chemins qui se rejoignent ne font pas une boucle.",problems:["cycle-des-prerequis","course-schedule","flight-routes-check"]}},{id:"q-probleme-les-lacs-de-l-ile",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : les lacs de l’île",question:`
 <p>
   Une île est dessinée sur une grille : <code>#</code> pour la terre, <code>.</code> pour l’eau. L’eau
   qui touche le bord de la grille, ou qui est reliée au bord par de l’eau (en passant par les côtés
@@ -11943,7 +11943,7 @@ afficher lacs</code></pre>
   <tr><th>région d’eau</th><td>coins du haut</td><td>en bas à droite</td><td>en bas à gauche</td><td>(4, 3)</td><td>à gauche</td><td>à droite</td></tr>
   <tr><th>touche le bord ?</th><td>oui</td><td>oui</td><td>oui</td><td>oui</td><td>non</td><td>non</td></tr>
   <tr><th>lac ?</th><td>non</td><td>non</td><td>non</td><td>non</td><td>oui</td><td>oui</td></tr>
-</table>`,parent:{goal:"Explorer depuis le bord d’abord, puis compter ce qui reste.",followUps:["Et si la case (2, 1) était de la terre ? (Toujours 2 : le lac de gauche fait 2 cases au lieu de 3.)","Combien de lacs pour une grille d’une seule ligne ? (0 : toute l’eau touche le bord.)"],commonMistake:"Compter toutes les régions d’eau : on trouverait 7 au lieu de 2, avec les morceaux de mer.",problems:["counting-rooms","oil-spill"]}},{id:"q-probleme-les-chemins-sans-retour",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : les chemins sans retour",question:`
+</table>`,parent:{goal:"Explorer depuis le bord d’abord, puis compter ce qui reste.",followUps:["Et si la case (2, 1) était de la terre ? (Toujours 2 : le lac de gauche fait 2 cases au lieu de 3.)","Combien de lacs pour une grille d’une seule ligne ? (0 : toute l’eau touche le bord.)"],commonMistake:"Compter toutes les régions d’eau : on trouverait 7 au lieu de 2, avec les morceaux de mer.",problems:["lacs-de-l-ile","counting-rooms","oil-spill"]}},{id:"q-probleme-les-chemins-sans-retour",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : les chemins sans retour",question:`
 <p>
   Une course d’orientation a <em>N</em> balises, numérotées de 1 à <em>N</em>. Les sentiers sont à
   sens unique, et vont toujours d’une balise vers une balise de plus grand numéro. On part de la
@@ -12012,7 +12012,7 @@ afficher reponse</code></pre>
   <tr><th>fichiers</th><td>2</td><td>5</td><td>1</td><td>8</td><td>3</td><td>4</td><td>2</td></tr>
   <tr><th>total</th><td>25</td><td>16</td><td>7</td><td>8</td><td>3</td><td>4</td><td>2</td></tr>
   <tr><th>compté ?</th><td>non</td><td>non</td><td>oui</td><td>oui</td><td>oui</td><td>oui</td><td>oui</td></tr>
-</table>`,parent:{goal:"Calculer une information pour chaque sous-arbre en une seule exploration.",followUps:["Et avec K = 20 ? (40 : on ajoute aussi le 16 du dossier 2.)","Quel dossier a toujours le plus grand total ? (Le dossier 1 : il contient tout.)"],commonMistake:"Ajouter seulement la taille des fichiers du dossier au lieu de son total : on trouverait une autre somme.",problems:["building-roads","coin-collector"]}},{id:"q-probleme-l-ancetre-commun",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : l’ancêtre commun",question:`
+</table>`,parent:{goal:"Calculer une information pour chaque sous-arbre en une seule exploration.",followUps:["Et avec K = 20 ? (40 : on ajoute aussi le 16 du dossier 2.)","Quel dossier a toujours le plus grand total ? (Le dossier 1 : il contient tout.)"],commonMistake:"Ajouter seulement la taille des fichiers du dossier au lieu de son total : on trouverait une autre somme.",problems:["arbre-des-dossiers","building-roads","coin-collector"]}},{id:"q-probleme-l-ancetre-commun",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : l’ancêtre commun",question:`
 <p>
   Une famille a <em>N</em> membres, numérotés de 1 à <em>N</em>. Le membre 1 est l’ancêtre de tous ;
   pour chaque autre membre, on connaît son parent. On pose des questions « <em>a</em> <em>b</em> » :
@@ -12049,7 +12049,7 @@ pour chaque question (a, b) :
   <tr><th>membre</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
   <tr><th>parent</th><td>—</td><td>1</td><td>1</td><td>2</td><td>2</td><td>3</td><td>5</td><td>5</td><td>6</td></tr>
   <tr><th>profondeur</th><td>0</td><td>1</td><td>1</td><td>2</td><td>2</td><td>2</td><td>3</td><td>3</td><td>3</td></tr>
-</table>`,parent:{goal:"Calculer les profondeurs par une exploration, puis faire monter deux pions ensemble.",followUps:["Que répond la question (5, 5) ? (5.)","Et (4, 1) ? (1 : tout le monde descend de 1.)","Comment trouver le nombre de liens entre a et b ? (prof[a] + prof[b] − 2 × prof[ancêtre].)"],commonMistake:"Faire monter les deux en même temps sans les mettre d’abord à la même profondeur : ils peuvent se croiser sans jamais être au même endroit.",problems:["building-roads","planets-queries-1"]}},{id:"q-probleme-les-villes-critiques",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : les villes critiques",question:`
+</table>`,parent:{goal:"Calculer les profondeurs par une exploration, puis faire monter deux pions ensemble.",followUps:["Que répond la question (5, 5) ? (5.)","Et (4, 1) ? (1 : tout le monde descend de 1.)","Comment trouver le nombre de liens entre a et b ? (prof[a] + prof[b] − 2 × prof[ancêtre].)"],commonMistake:"Faire monter les deux en même temps sans les mettre d’abord à la même profondeur : ils peuvent se croiser sans jamais être au même endroit.",problems:["ancetre-commun","building-roads","planets-queries-1"]}},{id:"q-probleme-les-villes-critiques",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : les villes critiques",question:`
 <p>
   Un pays a <em>N</em> villes reliées par <em>M</em> routes à double sens, et on peut aller de
   n’importe quelle ville à n’importe quelle autre. Une ville est <strong>critique</strong> si, quand
@@ -12208,7 +12208,7 @@ afficher visiter(1, 0)</code></pre>
   <tr><th>route</th><td>1 → 2</td><td>3 → 2</td><td>2 → 4</td><td>5 → 1</td><td>5 → 6</td></tr>
   <tr><th>parcourue depuis 1 comme</th><td>1 → 2</td><td>2 → 3</td><td>2 → 4</td><td>1 → 5</td><td>5 → 6</td></tr>
   <tr><th>à retourner ?</th><td>oui</td><td>non</td><td>oui</td><td>non</td><td>oui</td></tr>
-</table>`,parent:{goal:"Garder le sens des arêtes dans un parcours en profondeur sur un arbre non orienté.",followUps:["Et si le roi habitait la ville 2 ? (2 : les routes 2 → 4 et 5 → 6 ; maintenant 1 → 2 va vers le roi, mais 5 → 1 aussi.)","Et pour que le roi puisse aller partout depuis 1 ? (Il faut l’inverse : N − 1 − 3 = 2 routes à retourner.)"],commonMistake:"Explorer seulement dans le sens des routes : depuis 1, on n’atteindrait pas les villes 3 et 5.",problems:["building-roads","flight-routes-check"]}},{id:"q-probleme-la-somme-des-distances",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : la somme des distances",question:`
+</table>`,parent:{goal:"Garder le sens des arêtes dans un parcours en profondeur sur un arbre non orienté.",followUps:["Et si le roi habitait la ville 2 ? (2 : les routes 2 → 4 et 5 → 6 ; maintenant 1 → 2 va vers le roi, mais 5 → 1 aussi.)","Et pour que le roi puisse aller partout depuis 1 ? (Il faut l’inverse : N − 1 − 3 = 2 routes à retourner.)"],commonMistake:"Explorer seulement dans le sens des routes : depuis 1, on n’atteindrait pas les villes 3 et 5.",problems:["reorganisation-des-routes","building-roads","flight-routes-check"]}},{id:"q-probleme-la-somme-des-distances",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : la somme des distances",question:`
 <p>
   Un village a <em>N</em> maisons reliées par <em>N</em> − 1 chemins : c’est un arbre. La
   <strong>distance</strong> entre deux maisons est le nombre de chemins entre elles. Pour chaque
@@ -19864,7 +19864,98 @@ def ecrire():
   on écrit <code>import sys</code> puis <code>sys.setrecursionlimit(10000)</code>. Dans le
   navigateur, il vaut mieux rester raisonnable : quelques milliers d’appels emboîtés au plus.
 </p>
-`},vi:{title:"Đệ quy và quay lui"}},14:{fr:{title:"Parcours en profondeur",blurb:"Aller le plus loin possible, puis revenir : labyrinthes, îles, cycles et arbres.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Duyệt theo chiều sâu"}},15:{fr:{title:"Algorithmes de tri",blurb:"Tri par insertion, tri fusion et tri par comptage, et combien d’étapes chacun demande.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Thuật toán sắp xếp"}},16:{fr:{title:"Simulation et automates",blurb:"Suivre les règles pas à pas : des robots sur une grille, des grilles qui changent, des files d’attente.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Mô phỏng và ô-tô-mát"}},17:{fr:{title:"Astuces binaires",blurb:"Les nombres écrits avec des 0 et des 1 : le XOR, les masques, et tous les sous-ensembles avec un seul compteur.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Mẹo nhị phân"}},18:{fr:{title:"Graphes classiques",blurb:"Les plus courts chemins entre toutes les villes, Dijkstra avec un tas, et les arbres binaires de recherche.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Thuật toán đồ thị kinh điển"}},19:{fr:{title:"Jeux à deux joueurs",blurb:"Positions gagnantes et perdantes, le jeu de Nim, et des stratégies qui gagnent à coup sûr.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Trò chơi hai người"}},20:{fr:{title:"Problèmes de niveau concours",blurb:"Des problèmes de finale avec sous-tâches, où plusieurs idées des chapitres précédents se combinent.",lesson:`
+`},vi:{title:"Đệ quy và quay lui"}},14:{fr:{title:"Parcours en profondeur",blurb:"Aller le plus loin possible, puis revenir : labyrinthes, îles, cycles et arbres.",lesson:`
+<h3>Explorer un labyrinthe</h3>
+<p>
+  Tu es dans un labyrinthe avec une craie. À chaque carrefour, tu prends un couloir que tu n’as pas
+  encore marqué, et tu avances le plus loin possible. Quand tu es coincé (cul-de-sac, ou que des
+  couloirs déjà marqués), tu reviens sur tes pas jusqu’au carrefour d’avant, et tu essaies un autre
+  couloir. C’est le <strong>parcours en profondeur</strong> : aller le plus loin possible, revenir en
+  arrière seulement quand on est bloqué.
+</p>
+
+<h3>Un graphe</h3>
+<p>
+  Les carrefours et les couloirs forment un <strong>graphe</strong> : des <strong>sommets</strong>
+  (les points) reliés par des <strong>arêtes</strong> (les liens). On range, pour chaque sommet, la
+  liste de ses voisins :
+</p>
+<pre><code>voisins = [[] for _ in range(n + 1)]
+for _ in range(m):
+    a, b = map(int, input().split())
+    voisins[a].append(b)
+    voisins[b].append(a)       # une rue à double sens</code></pre>
+
+<h3>La fonction qui explore</h3>
+<p>
+  Le parcours en profondeur s’écrit très bien avec une fonction récursive. Le tableau
+  <code>vu</code> joue le rôle de la craie.
+</p>
+<pre><code>vu = [False] * (n + 1)
+def visiter(v):
+    vu[v] = True
+    for w in voisins[v]:
+        if not vu[w]:
+            visiter(w)</code></pre>
+<p>
+  Chaque appel en cours est un carrefour où l’on devra revenir : la pile des appels fait le retour en
+  arrière toute seule. Par exemple, avec les rues 1–2, 1–5, 2–3, 2–4, 3–7, 4–6, 5–6, en partant de 1 :
+</p>
+<table class="lesson-table">
+  <tr><th>découverte</th><td>1</td><td>2</td><td>3</td><td>7</td><td>4</td><td>6</td><td>5</td></tr>
+  <tr><th>appels en cours</th><td>1</td><td>1 2</td><td>1 2 3</td><td>1 2 3 7</td><td>1 2 4</td><td>1 2 4 6</td><td>1 2 4 6 5</td></tr>
+</table>
+<p>
+  Sans le tableau <code>vu</code>, on tournerait en rond : 1 → 2 → 1 → 2… Chaque arête est regardée
+  deux fois en tout : le parcours est très rapide.
+</p>
+
+<h3>Sur une grille</h3>
+<p>
+  Une grille est un graphe caché : chaque case est un sommet, voisin des 4 cases à côté (si elles
+  existent). Pas besoin de liste de voisins, on les calcule :
+</p>
+<pre><code>for a, b in ((i + 1, j), (i - 1, j), (i, j + 1), (i, j - 1)):
+    if 0 &lt;= a &lt; L and 0 &lt;= b &lt; C and carte[a][b] == "#" and not vu[a][b]:
+        explorer(a, b)</code></pre>
+<p>
+  En lançant l’exploration depuis chaque case pas encore vue, on compte les îles, les pièces d’un
+  château ou les lacs.
+</p>
+
+<h3>Les arbres</h3>
+<p>
+  Un <strong>arbre</strong> est un graphe sans boucle où tout est relié (comme un arbre généalogique) :
+  avec <em>N</em> sommets, il a <em>N</em> − 1 arêtes. On l’accroche par un sommet, la
+  <strong>racine</strong>. Dans un arbre, pas besoin du tableau <code>vu</code> : il suffit de ne pas
+  remonter vers son parent.
+</p>
+<pre><code>def taille(v, parent):
+    t = 1
+    for w in voisins[v]:
+        if w != parent:        # les autres voisins sont des enfants
+            t += taille(w, v)
+    return t</code></pre>
+<p>
+  C’est la grande force du parcours en profondeur sur un arbre : chaque sommet <strong>calcule sa
+  réponse à partir de celles de ses enfants</strong> (une taille, une hauteur, une somme, le meilleur
+  chemin…), et les réponses remontent jusqu’à la racine.
+</p>
+
+<h3>Repérer une boucle</h3>
+<p>
+  Dans un graphe à sens unique (des flèches), on colorie les sommets : <strong>blanc</strong> pas
+  encore vu, <strong>gris</strong> son appel est en cours, <strong>noir</strong> fini. Une flèche qui
+  arrive sur un sommet gris revient sur la pile des appels : il y a une boucle.
+</p>
+
+<h3>Pour plus tard</h3>
+<p>
+  Python limite le nombre d’appels en attente (environ 1 000). Les exercices de ce chapitre écrivent
+  <code>sys.setrecursionlimit(10000)</code> au début. Pour de très grands graphes, on remplace la
+  récursion par une pile qu’on gère soi-même (une liste avec <code>append</code> et <code>pop</code>).
+</p>
+`},vi:{title:"Duyệt theo chiều sâu"}},15:{fr:{title:"Algorithmes de tri",blurb:"Tri par insertion, tri fusion et tri par comptage, et combien d’étapes chacun demande.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Thuật toán sắp xếp"}},16:{fr:{title:"Simulation et automates",blurb:"Suivre les règles pas à pas : des robots sur une grille, des grilles qui changent, des files d’attente.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Mô phỏng và ô-tô-mát"}},17:{fr:{title:"Astuces binaires",blurb:"Les nombres écrits avec des 0 et des 1 : le XOR, les masques, et tous les sous-ensembles avec un seul compteur.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Mẹo nhị phân"}},18:{fr:{title:"Graphes classiques",blurb:"Les plus courts chemins entre toutes les villes, Dijkstra avec un tas, et les arbres binaires de recherche.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Thuật toán đồ thị kinh điển"}},19:{fr:{title:"Jeux à deux joueurs",blurb:"Positions gagnantes et perdantes, le jeu de Nim, et des stratégies qui gagnent à coup sûr.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Trò chơi hai người"}},20:{fr:{title:"Problèmes de niveau concours",blurb:"Des problèmes de finale avec sous-tâches, où plusieurs idées des chapitres précédents se combinent.",lesson:`
 <h3>Comment est construit un problème de finale</h3>
 <p>
   Les problèmes plus durs ont des <strong>sous-tâches</strong> : la même question, mais avec des limites en
