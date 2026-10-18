@@ -12776,7 +12776,7 @@ afficher r, c, le nombre d’éléments de vues</code></pre>
 <table class="lesson-table">
   <tr><th>ordre</th><td>E</td><td>E</td><td>S</td><td>S</td><td>S</td><td>E</td><td>N</td><td>N</td><td>E</td></tr>
   <tr><th>case</th><td>(1, 2)</td><td>(1, 3)</td><td>(2, 3)</td><td>(3, 3)</td><td>(4, 3)</td><td>(4, 4)</td><td>mur</td><td>mur</td><td>(4, 5)</td></tr>
-</table>`,parent:{goal:"Simuler pas à pas, avec un tableau de déplacements et un ensemble des cases vues.",followUps:["Et avec les ordres OOOO ? (1 1 1 : il reste coincé dans le coin.)","Que changerait une grille où l’on ressort de l’autre côté quand on sort par un bord ? (On calculerait la case visée modulo L et C, sans jamais être bloqué par le bord.)"],commonMistake:"Lire grille[a][b] avant de vérifier que la case est dans la grille : erreur dès que le robot touche le bord.",problems:["robot-vacuum","teletrip"]}},{id:"q-probleme-la-file-de-la-boulangerie",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la file de la boulangerie",question:`
+</table>`,parent:{goal:"Simuler pas à pas, avec un tableau de déplacements et un ensemble des cases vues.",followUps:["Et avec les ordres OOOO ? (1 1 1 : il reste coincé dans le coin.)","Que changerait une grille où l’on ressort de l’autre côté quand on sort par un bord ? (On calculerait la case visée modulo L et C, sans jamais être bloqué par le bord.)"],commonMistake:"Lire grille[a][b] avant de vérifier que la case est dans la grille : erreur dès que le robot touche le bord.",problems:["robot-sur-la-grille","robot-vacuum","teletrip"]}},{id:"q-probleme-la-file-de-la-boulangerie",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la file de la boulangerie",question:`
 <p>
   Un seul boulanger sert les clients, un par un, dans l’ordre d’arrivée. Pour chaque client, on
   connaît la minute où il arrive et le temps qu’il faut pour le servir. Si le boulanger est libre, il
@@ -12804,7 +12804,7 @@ pour chaque client (arrivee, duree) :
   <tr><th>arrivée</th><td>0</td><td>1</td><td>2</td><td>10</td><td>10</td><td>11</td></tr>
   <tr><th>début</th><td>0</td><td>3</td><td>5</td><td>10</td><td>11</td><td>14</td></tr>
   <tr><th>sortie</th><td>3</td><td>5</td><td>9</td><td>11</td><td>14</td><td>16</td></tr>
-</table>`,parent:{goal:"Simuler par événements au lieu de simuler chaque minute.",followUps:["Combien de temps le client 3 a-t-il attendu ? (3 minutes : arrivé à 2, servi à 5.)","Pendant combien de minutes le boulanger ne fait-il rien ? (1 : entre 9 et 10.)"],commonMistake:"Écrire t ← t + duree sans le max : un client arrivé quand le boulanger est libre serait servi avant d’arriver.",problems:["restaurant-customers","movie-festival"]}},{id:"q-probleme-le-jeu-de-la-vie",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le jeu de la vie",question:`
+</table>`,parent:{goal:"Simuler par événements au lieu de simuler chaque minute.",followUps:["Combien de temps le client 3 a-t-il attendu ? (3 minutes : arrivé à 2, servi à 5.)","Pendant combien de minutes le boulanger ne fait-il rien ? (1 : entre 9 et 10.)"],commonMistake:"Écrire t ← t + duree sans le max : un client arrivé quand le boulanger est libre serait servi avant d’arriver.",problems:["file-de-la-boulangerie","restaurant-customers","movie-festival"]}},{id:"q-probleme-le-jeu-de-la-vie",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le jeu de la vie",question:`
 <p>
   Sur une grille, chaque case est vivante (<code>#</code>) ou morte (<code>.</code>). À chaque
   génération, toutes les cases changent <strong>en même temps</strong>, d’après leurs 8 voisines
@@ -12836,7 +12836,7 @@ afficher le nombre de cases vivantes de grille</code></pre>
   <tr><th>génération</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
   <tr><th>cases vivantes</th><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td></tr>
   <tr><th>position du planeur</th><td>départ</td><td></td><td></td><td></td><td>une case en bas à droite</td></tr>
-</table>`,parent:{goal:"Un automate cellulaire : calculer la génération suivante dans une nouvelle grille.",followUps:["Que devient une ligne de 3 cases vivantes ? (Elle devient une colonne de 3, puis redevient une ligne : un clignotant.)","Et un carré de 2 × 2 ? (Il ne bouge jamais : chaque case a 3 voisines vivantes.)"],commonMistake:"Modifier la grille pendant qu’on la parcourt : les cases suivantes compteraient des voisines déjà changées.",problems:["flipper","block-of-four"]}},{id:"q-probleme-le-feu-tricolore",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le feu tricolore",question:`
+</table>`,parent:{goal:"Un automate cellulaire : calculer la génération suivante dans une nouvelle grille.",followUps:["Que devient une ligne de 3 cases vivantes ? (Elle devient une colonne de 3, puis redevient une ligne : un clignotant.)","Et un carré de 2 × 2 ? (Il ne bouge jamais : chaque case a 3 voisines vivantes.)"],commonMistake:"Modifier la grille pendant qu’on la parcourt : les cases suivantes compteraient des voisines déjà changées.",problems:["jeu-de-la-vie","flipper","block-of-four"]}},{id:"q-probleme-le-feu-tricolore",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : le feu tricolore",question:`
 <p>
   Un feu reste vert pendant <em>G</em> secondes, puis orange pendant <em>O</em> secondes, puis rouge
   pendant <em>R</em> secondes, et recommence. À la seconde 0, il vient de passer au vert. De quelle
@@ -12866,7 +12866,7 @@ afficher couleur, rouges</code></pre>
 <table class="lesson-table">
   <tr><th>secondes</th><td>0 à 29</td><td>30 à 34</td><td>35 à 59</td><td>60 à 89</td><td>…</td><td>960 à 989</td><td>990 à 994</td><td>995 à 1 019</td></tr>
   <tr><th>couleur</th><td>vert</td><td>orange</td><td>rouge</td><td>vert</td><td>…</td><td>vert</td><td>orange</td><td>rouge</td></tr>
-</table>`,parent:{goal:"Une simulation qui se répète : utiliser le reste de la division au lieu de tout simuler.",followUps:["De quelle couleur est le feu à la seconde 60 ? (Vert : 60 mod 60 = 0.)","Et combien de passages au rouge jusqu’à la seconde 34 ? (0 : le premier est à 35.)"],commonMistake:"Écrire t ≤ G pour le vert : à la seconde 30, le feu serait encore vert alors qu’il vient de passer à l’orange.",problems:["wait-time","teletrip"]}},{id:"q-probleme-la-fourmi-de-langton",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la fourmi de Langton",question:`
+</table>`,parent:{goal:"Une simulation qui se répète : utiliser le reste de la division au lieu de tout simuler.",followUps:["De quelle couleur est le feu à la seconde 60 ? (Vert : 60 mod 60 = 0.)","Et combien de passages au rouge jusqu’à la seconde 34 ? (0 : le premier est à 35.)"],commonMistake:"Écrire t ≤ G pour le vert : à la seconde 30, le feu serait encore vert alors qu’il vient de passer à l’orange.",problems:["feu-tricolore","wait-time","teletrip"]}},{id:"q-probleme-la-fourmi-de-langton",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:4,title:"Problème : la fourmi de Langton",question:`
 <p>
   Une fourmi est sur une grille infinie dont toutes les cases sont blanches. Elle regarde vers le
   haut. À chaque pas : si sa case est <strong>blanche</strong>, elle tourne d’un quart de tour à
@@ -12902,7 +12902,7 @@ afficher le nombre d’éléments de noires</code></pre>
   <tr><th>pas</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
   <tr><th>case de départ</th><td>blanche</td><td>blanche</td><td>blanche</td><td>blanche</td><td>noire</td><td>blanche</td><td>blanche</td><td>blanche</td><td>blanche</td><td>noire</td></tr>
   <tr><th>cases noires après</th><td>1</td><td>2</td><td>3</td><td>4</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>6</td></tr>
-</table>`,parent:{goal:"Simuler sur une grille infinie en ne gardant que les cases utiles.",followUps:["Combien de cases noires après 4 pas ? (4, en carré.)","Pourquoi un ensemble plutôt qu’une liste de cases noires ? (Chercher dans une liste demande de la parcourir en entier ; un ensemble répond tout de suite.)"],commonMistake:"Avancer avant de tourner : la fourmi ne suivrait plus du tout le même chemin.",problems:["robot-vacuum","number-spiral"]}},{id:"q-probleme-la-porte-a-code",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : la porte à code",question:`
+</table>`,parent:{goal:"Simuler sur une grille infinie en ne gardant que les cases utiles.",followUps:["Combien de cases noires après 4 pas ? (4, en carré.)","Pourquoi un ensemble plutôt qu’une liste de cases noires ? (Chercher dans une liste demande de la parcourir en entier ; un ensemble répond tout de suite.)"],commonMistake:"Avancer avant de tourner : la fourmi ne suivrait plus du tout le même chemin.",problems:["fourmi-de-langton","robot-vacuum","number-spiral"]}},{id:"q-probleme-la-porte-a-code",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : la porte à code",question:`
 <p>
   Une porte s’ouvre dès que les derniers chiffres tapés sur le clavier forment le code secret. Un
   enfant tape une longue suite de chiffres. Combien de fois la porte s’est-elle ouverte ? (Les
@@ -12972,7 +12972,7 @@ pour chaque i : afficher R si force[i] &gt; 0, L si force[i] &lt; 0, . sinon</co
   <tr><th>domino</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
   <tr><th>départ</th><td>.</td><td>L</td><td>.</td><td>R</td><td>.</td><td>.</td><td>.</td><td>L</td><td>R</td><td>.</td><td>.</td><td>L</td><td>.</td><td>.</td></tr>
   <tr><th>fin</th><td>L</td><td>L</td><td>.</td><td>R</td><td>R</td><td>.</td><td>L</td><td>L</td><td>R</td><td>R</td><td>L</td><td>L</td><td>.</td><td>.</td></tr>
-</table>`,parent:{goal:"Remplacer une simulation lente par deux passages qui calculent quand chaque événement arrive.",followUps:["Que devient R.L ? (R.L : le domino du milieu est poussé des deux côtés.)","Et un R suivi de 3 dominos debout ? (RRRR : les trois tombent.)"],commonMistake:"Oublier qu’un L arrête la poussée d’un R : dans R.L.., les deux derniers dominos tomberaient vers la droite, alors qu’ils restent debout.",problems:["laser-cutter","bouncing-marble"]}},{id:"q-probleme-l-anneau-de-lampes",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : l’anneau de lampes",question:`
+</table>`,parent:{goal:"Remplacer une simulation lente par deux passages qui calculent quand chaque événement arrive.",followUps:["Que devient R.L ? (R.L : le domino du milieu est poussé des deux côtés.)","Et un R suivi de 3 dominos debout ? (RRRR : les trois tombent.)"],commonMistake:"Oublier qu’un L arrête la poussée d’un R : dans R.L.., les deux derniers dominos tomberaient vers la droite, alors qu’ils restent debout.",problems:["dominos-qui-tombent","laser-cutter","bouncing-marble"]}},{id:"q-probleme-l-anneau-de-lampes",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : l’anneau de lampes",question:`
 <p>
   <em>N</em> lampes sont posées en cercle : la dernière est voisine de la première. Chaque seconde,
   toutes les lampes changent en même temps : une lampe s’allume si <strong>exactement une</strong>
@@ -13007,7 +13007,7 @@ afficher etat</code></pre>
 <table class="lesson-table">
   <tr><th>seconde</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
   <tr><th>lampes</th><td>1000000</td><td>0100001</td><td>0010010</td><td>0101101</td><td>0001100</td><td>0011110</td><td>0110011</td><td>0111111</td><td>0100001</td></tr>
-</table>`,parent:{goal:"Détecter qu’une simulation boucle, et sauter directement à la fin.",followUps:["Quel est l’état après 7 secondes ? (0111111.)","Et après 10<sup>18</sup> + 1 secondes ? (0010010, celui de la seconde 2.)","Pourquoi l’état de départ n’est-il plus jamais revu ? (Aucun état ne mène à 1000000 : il n’est pas dans le cycle.)"],commonMistake:"Supposer que le cycle commence à la seconde 0 : ici, l’état de départ n’est pas dans le cycle, et on afficherait un état faux.",problems:["planets-cycles","teleporter-loop"]}},{id:"q-probleme-l-eboulement-du-sable",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : l’éboulement du sable",question:`
+</table>`,parent:{goal:"Détecter qu’une simulation boucle, et sauter directement à la fin.",followUps:["Quel est l’état après 7 secondes ? (0111111.)","Et après 10<sup>18</sup> + 1 secondes ? (0010010, celui de la seconde 2.)","Pourquoi l’état de départ n’est-il plus jamais revu ? (Aucun état ne mène à 1000000 : il n’est pas dans le cycle.)"],commonMistake:"Supposer que le cycle commence à la seconde 0 : ici, l’état de départ n’est pas dans le cycle, et on afficherait un état faux.",problems:["anneau-de-lampes","planets-cycles","teleporter-loop"]}},{id:"q-probleme-l-eboulement-du-sable",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : l’éboulement du sable",question:`
 <p>
   Une table est découpée en cases, et chaque case porte un tas de grains de sable. Dès qu’une case a
   <strong>4 grains ou plus</strong>, elle s’éboule : elle perd 4 grains et en donne un à chacune de
@@ -13041,7 +13041,7 @@ afficher g</code></pre>
   <tr><th>étape</th><td>départ</td><td>le milieu s’éboule 2 fois</td></tr>
   <tr><th>milieu</th><td>9</td><td>1</td></tr>
   <tr><th>chaque voisine</th><td>0</td><td>2</td></tr>
-</table>`,parent:{goal:"Simuler avec une pile des cases à vérifier, et regrouper les étapes identiques.",followUps:["Que devient une table 1 × 1 avec 10 grains ? (2 : les 8 autres tombent hors de la table.)","Et une table 1 × 3 avec 0 4 0 ? (1 0 1 : le milieu donne un grain à chaque voisine, deux tombent dehors.)"],commonMistake:"Faire s’ébouler une case une seule fois alors qu’elle a encore 4 grains ou plus : une case de 9 grains doit s’ébouler 2 fois.",problems:["painting-the-barn","forest-queries"]}},{id:"q-probleme-le-serpent",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le serpent",question:`
+</table>`,parent:{goal:"Simuler avec une pile des cases à vérifier, et regrouper les étapes identiques.",followUps:["Que devient une table 1 × 1 avec 10 grains ? (2 : les 8 autres tombent hors de la table.)","Et une table 1 × 3 avec 0 4 0 ? (1 0 1 : le milieu donne un grain à chaque voisine, deux tombent dehors.)"],commonMistake:"Faire s’ébouler une case une seule fois alors qu’elle a encore 4 grains ou plus : une case de 9 grains doit s’ébouler 2 fois.",problems:["eboulement-du-sable","painting-the-barn","forest-queries"]}},{id:"q-probleme-le-serpent",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:5,title:"Problème : le serpent",question:`
 <p>
   Dans un jeu, un serpent avance sur une grille. Au départ, il fait une seule case de long, en haut à
   gauche. Chaque ordre (<code>N</code>, <code>S</code>, <code>E</code>, <code>O</code>) fait avancer
@@ -13079,7 +13079,7 @@ afficher coups, la longueur de corps</code></pre>
   <tr><th>ordre</th><td>E</td><td>E</td><td>S</td><td>S</td><td>O</td><td>O</td><td>N</td><td>N</td><td>E</td></tr>
   <tr><th>tête</th><td>(1, 2)</td><td>(1, 3)</td><td>(2, 3)</td><td>(3, 3)</td><td>(3, 2)</td><td>(3, 1)</td><td>(2, 1)</td><td>(1, 1)</td><td>(1, 2)</td></tr>
   <tr><th>longueur</th><td>2</td><td>3</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td></tr>
-</table>`,parent:{goal:"Une file à deux bouts et un ensemble pour simuler un corps qui avance.",followUps:["Et si on ajoutait un ordre S à la fin ? (Il survit : la case (2, 2) est libre. Réponse 10 4.)","Avec les ordres EESN, que se passe-t-il ? (Au 4e ordre, sa tête remonterait en (1, 3), encore occupée par son corps : il meurt. Réponse 3 4.)"],commonMistake:"Tester la nouvelle tête avant d’enlever la queue : le serpent mourrait en suivant sa propre queue, alors que c’est permis.",problems:["robot-vacuum","card-pile"]}},{id:"q-probleme-les-fourmis-sur-la-poutre",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : les fourmis sur la poutre",question:`
+</table>`,parent:{goal:"Une file à deux bouts et un ensemble pour simuler un corps qui avance.",followUps:["Et si on ajoutait un ordre S à la fin ? (Il survit : la case (2, 2) est libre. Réponse 10 4.)","Avec les ordres EESN, que se passe-t-il ? (Au 4e ordre, sa tête remonterait en (1, 3), encore occupée par son corps : il meurt. Réponse 3 4.)"],commonMistake:"Tester la nouvelle tête avant d’enlever la queue : le serpent mourrait en suivant sa propre queue, alors que c’est permis.",problems:["serpent","robot-vacuum","card-pile"]}},{id:"q-probleme-les-fourmis-sur-la-poutre",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : les fourmis sur la poutre",question:`
 <p>
   Des fourmis marchent sur une poutre de longueur <em>L</em>, à une case par seconde, chacune vers la
   gauche (<code>G</code>) ou vers la droite (<code>D</code>). Quand deux fourmis se rencontrent,
@@ -13151,7 +13151,7 @@ pour chaque client (a, d) :
   <tr><th>arrivée, durée</th><td>0, 5</td><td>1, 3</td><td>2, 4</td><td>4, 2</td><td>9, 1</td><td>9, 6</td></tr>
   <tr><th>guichet</th><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>2</td></tr>
   <tr><th>sortie</th><td>5</td><td>4</td><td>8</td><td>7</td><td>10</td><td>15</td></tr>
-</table>`,parent:{goal:"Une simulation par événements avec des tas : toujours savoir qui est libre en premier.",followUps:["Avec un seul guichet, que devient le problème ? (La file de la boulangerie.)","Pourquoi le client 5 prend-il le guichet 1 et pas le 2 ? (Les deux sont libres à la minute 9 : il prend le plus petit numéro.)"],commonMistake:"Prendre le guichet qui s’est libéré le plus tôt au lieu du plus petit numéro libre : si le guichet 2 s’était libéré avant le guichet 1, le client irait au 2, alors que la règle dit le 1.",problems:["room-allocation","factory-machines"]}},{id:"q-probleme-les-codes-sans-motif",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : les codes sans motif",question:`
+</table>`,parent:{goal:"Une simulation par événements avec des tas : toujours savoir qui est libre en premier.",followUps:["Avec un seul guichet, que devient le problème ? (La file de la boulangerie.)","Pourquoi le client 5 prend-il le guichet 1 et pas le 2 ? (Les deux sont libres à la minute 9 : il prend le plus petit numéro.)"],commonMistake:"Prendre le guichet qui s’est libéré le plus tôt au lieu du plus petit numéro libre : si le guichet 2 s’était libéré avant le guichet 1, le client irait au 2, alors que la règle dit le 1.",problems:["guichets","room-allocation","factory-machines"]}},{id:"q-probleme-les-codes-sans-motif",level:"entrainement",kind:"rapide",duration:"probleme",difficulty:6,title:"Problème : les codes sans motif",question:`
 <p>
   Un code secret est un mot de <em>N</em> lettres, chacune <code>A</code>, <code>B</code> ou
   <code>C</code>. Pour qu’un code soit accepté, il ne doit <strong>pas contenir</strong> le motif
@@ -20037,7 +20037,86 @@ def visiter(v):
   <em>N</em> × log<sub>2</sub> <em>N</em> comparaisons au minimum. Le tri par comptage échappe à cette
   règle parce qu’il ne compare jamais : il profite de ce que les valeurs sont petites.
 </p>
-`},vi:{title:"Thuật toán sắp xếp"}},16:{fr:{title:"Simulation et automates",blurb:"Suivre les règles pas à pas : des robots sur une grille, des grilles qui changent, des files d’attente.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Mô phỏng và ô-tô-mát"}},17:{fr:{title:"Astuces binaires",blurb:"Les nombres écrits avec des 0 et des 1 : le XOR, les masques, et tous les sous-ensembles avec un seul compteur.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Mẹo nhị phân"}},18:{fr:{title:"Graphes classiques",blurb:"Les plus courts chemins entre toutes les villes, Dijkstra avec un tas, et les arbres binaires de recherche.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Thuật toán đồ thị kinh điển"}},19:{fr:{title:"Jeux à deux joueurs",blurb:"Positions gagnantes et perdantes, le jeu de Nim, et des stratégies qui gagnent à coup sûr.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Trò chơi hai người"}},20:{fr:{title:"Problèmes de niveau concours",blurb:"Des problèmes de finale avec sous-tâches, où plusieurs idées des chapitres précédents se combinent.",lesson:`
+`},vi:{title:"Thuật toán sắp xếp"}},16:{fr:{title:"Simulation et automates",blurb:"Suivre les règles pas à pas : des robots sur une grille, des grilles qui changent, des files d’attente.",lesson:`
+<h3>Faire exactement ce que dit l’énoncé</h3>
+<p>
+  Certains problèmes ne demandent pas d’idée géniale : un robot suit des ordres, des clients font la
+  queue, des dominos tombent. Il faut <strong>simuler</strong> : faire en Python, pas à pas, ce qui se
+  passe dans l’histoire. La difficulté est d’être très précis, et d’aller assez vite.
+</p>
+
+<h3>Bien ranger l’état</h3>
+<p>
+  L’<strong>état</strong>, c’est tout ce qu’il faut savoir pour continuer : la position du robot et sa
+  direction, le contenu de la grille, l’heure… Choisir la bonne façon de le ranger change tout.
+</p>
+<table class="lesson-table">
+  <tr><th>besoin</th><th>outil</th></tr>
+  <tr><td>des déplacements N, S, E, O</td><td>un dictionnaire <code>{"N": (-1, 0), …}</code></td></tr>
+  <tr><td>« cette case a-t-elle déjà été vue ? »</td><td>un ensemble (<code>set</code>)</td></tr>
+  <tr><td>une grille infinie</td><td>un ensemble des seules cases utiles</td></tr>
+  <tr><td>ajouter devant, enlever derrière</td><td>une <code>deque</code></td></tr>
+  <tr><td>« qui est libre en premier ? »</td><td>un tas (<code>heapq</code>)</td></tr>
+</table>
+
+<h3>Tout change en même temps</h3>
+<p>
+  Dans le jeu de la vie, toutes les cases changent <em>en même temps</em>. Si on modifie la grille
+  pendant qu’on la parcourt, les cases suivantes voient un mélange d’ancien et de nouveau. La règle :
+  calculer la génération suivante dans une <strong>nouvelle</strong> grille, puis remplacer.
+</p>
+<pre><code>nouvelle = [[False] * C for _ in range(L)]
+# … remplir nouvelle en lisant seulement grille …
+grille = nouvelle</code></pre>
+
+<h3>Ne pas simuler ce qui ne se passe pas</h3>
+<p>
+  Simuler minute par minute une boulangerie ouverte un milliard de minutes est impossible. Mais il ne
+  se passe quelque chose qu’à l’arrivée ou au départ d’un client : on saute d’un
+  <strong>événement</strong> au suivant.
+</p>
+<pre><code>t = 0                         # le boulanger est libre à partir de t
+for arrivee, duree in clients:
+    t = max(t, arrivee) + duree</code></pre>
+
+<h3>Les automates</h3>
+<p>
+  Un <strong>automate</strong> est une machine qui a un petit nombre d’états, et une règle qui dit
+  quel est l’état suivant. Un feu tricolore (vert → orange → rouge → vert), un digicode qui se
+  souvient des derniers chiffres tapés, un anneau de lampes… Avec un nombre fini d’états, une
+  simulation finit toujours par <strong>repasser par un état déjà vu</strong>, et à partir de là
+  tout se répète.
+</p>
+
+<h3>Repérer une boucle pour sauter à la fin</h3>
+<p>On note dans un dictionnaire la seconde où l’on voit chaque état. Dès qu’un état revient :</p>
+<pre><code>vu = {}
+t = 0
+while t &lt; K:
+    if etat in vu:
+        cycle = t - vu[etat]
+        reste = (K - t) % cycle        # on saute tous les tours complets
+        # … il ne reste que « reste » étapes à faire …
+        break
+    vu[etat] = t
+    etat = suivant(etat)
+    t += 1</code></pre>
+<table class="lesson-table">
+  <tr><th>seconde</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+  <tr><th>état</th><td>A</td><td>B</td><td>C</td><td>D</td><td>B</td><td>C</td></tr>
+</table>
+<p>
+  Ici, B revient à la seconde 4 après avoir été vu à la seconde 1 : le cycle dure 3 secondes. La
+  seconde 10<sup>18</sup> se ramène alors à une seconde entre 1 et 3, qu’on connaît déjà.
+</p>
+
+<h3>Pour plus tard</h3>
+<p>
+  Parfois une simulation lente cache une formule rapide : dans les dominos qui tombent, on calcule
+  pour chaque domino <em>quand</em> une poussée l’atteint, au lieu de simuler chaque seconde. Avant de
+  simuler, demande-toi toujours combien d’étapes il faudrait au pire.
+</p>
+`},vi:{title:"Mô phỏng và ô-tô-mát"}},17:{fr:{title:"Astuces binaires",blurb:"Les nombres écrits avec des 0 et des 1 : le XOR, les masques, et tous les sous-ensembles avec un seul compteur.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Mẹo nhị phân"}},18:{fr:{title:"Graphes classiques",blurb:"Les plus courts chemins entre toutes les villes, Dijkstra avec un tas, et les arbres binaires de recherche.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Thuật toán đồ thị kinh điển"}},19:{fr:{title:"Jeux à deux joueurs",blurb:"Positions gagnantes et perdantes, le jeu de Nim, et des stratégies qui gagnent à coup sûr.",lesson:"<p>Ce chapitre est en cours d’écriture : sa leçon et ses exercices en Python arrivent bientôt. Ses problèmes longs, à résoudre sur papier en pseudo-code, sont déjà là.</p>"},vi:{title:"Trò chơi hai người"}},20:{fr:{title:"Problèmes de niveau concours",blurb:"Des problèmes de finale avec sous-tâches, où plusieurs idées des chapitres précédents se combinent.",lesson:`
 <h3>Comment est construit un problème de finale</h3>
 <p>
   Les problèmes plus durs ont des <strong>sous-tâches</strong> : la même question, mais avec des limites en
